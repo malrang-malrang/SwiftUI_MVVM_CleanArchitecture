@@ -34,7 +34,7 @@
 		30903BE32B08A37300EB69ED /* PanelizationSummaryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BD32B08A37300EB69ED /* PanelizationSummaryDTO.swift */; };
 		30903BED2B08A37800EB69ED /* BookSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BE62B08A37800EB69ED /* BookSearchRequest.swift */; };
 		30903BEE2B08A37800EB69ED /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BE72B08A37800EB69ED /* SearchResult.swift */; };
-		30903BEF2B08A37800EB69ED /* GetProductsUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BEA2B08A37800EB69ED /* GetProductsUsecase.swift */; };
+		30903BEF2B08A37800EB69ED /* GetBookListUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BEA2B08A37800EB69ED /* GetBookListUsecase.swift */; };
 		30903BF02B08A37800EB69ED /* GoogleBooksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BEC2B08A37800EB69ED /* GoogleBooksRepository.swift */; };
 		30903BF92B08A42400EB69ED /* APILoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BF62B08A42400EB69ED /* APILoggerPlugin.swift */; };
 		30903BFA2B08A42400EB69ED /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BF82B08A42400EB69ED /* NetworkProvider.swift */; };
@@ -42,6 +42,9 @@
 		30903C062B08A45C00EB69ED /* Color+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BFE2B08A45C00EB69ED /* Color+Sugar.swift */; };
 		30903C072B08A45C00EB69ED /* Result+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BFF2B08A45C00EB69ED /* Result+Sugar.swift */; };
 		30903C092B08A45C00EB69ED /* FrameDebugModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C042B08A45C00EB69ED /* FrameDebugModifier.swift */; };
+		30903C112B08A9F400EB69ED /* ProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C0E2B08A9F400EB69ED /* ProductImage.swift */; };
+		30903C122B08A9F400EB69ED /* BorderPaddingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C102B08A9F400EB69ED /* BorderPaddingButton.swift */; };
+		30903C152B08AA9800EB69ED /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C142B08AA9800EB69ED /* ColorPalette.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +93,7 @@
 		30903BD32B08A37300EB69ED /* PanelizationSummaryDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanelizationSummaryDTO.swift; sourceTree = "<group>"; };
 		30903BE62B08A37800EB69ED /* BookSearchRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookSearchRequest.swift; sourceTree = "<group>"; };
 		30903BE72B08A37800EB69ED /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
-		30903BEA2B08A37800EB69ED /* GetProductsUsecase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetProductsUsecase.swift; sourceTree = "<group>"; };
+		30903BEA2B08A37800EB69ED /* GetBookListUsecase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetBookListUsecase.swift; sourceTree = "<group>"; };
 		30903BEC2B08A37800EB69ED /* GoogleBooksRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleBooksRepository.swift; sourceTree = "<group>"; };
 		30903BF62B08A42400EB69ED /* APILoggerPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APILoggerPlugin.swift; sourceTree = "<group>"; };
 		30903BF82B08A42400EB69ED /* NetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
@@ -98,6 +101,9 @@
 		30903BFE2B08A45C00EB69ED /* Color+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Sugar.swift"; sourceTree = "<group>"; };
 		30903BFF2B08A45C00EB69ED /* Result+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+Sugar.swift"; sourceTree = "<group>"; };
 		30903C042B08A45C00EB69ED /* FrameDebugModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameDebugModifier.swift; sourceTree = "<group>"; };
+		30903C0E2B08A9F400EB69ED /* ProductImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductImage.swift; sourceTree = "<group>"; };
+		30903C102B08A9F400EB69ED /* BorderPaddingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderPaddingButton.swift; sourceTree = "<group>"; };
+		30903C142B08AA9800EB69ED /* ColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				30903BB42B089FE100EB69ED /* Assets */,
+				30903C132B08AA9800EB69ED /* Color */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -320,7 +327,7 @@
 		30903BE92B08A37800EB69ED /* Book */ = {
 			isa = PBXGroup;
 			children = (
-				30903BEA2B08A37800EB69ED /* GetProductsUsecase.swift */,
+				30903BEA2B08A37800EB69ED /* GetBookListUsecase.swift */,
 			);
 			path = Book;
 			sourceTree = "<group>";
@@ -345,6 +352,7 @@
 		30903BF22B08A3CB00EB69ED /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				30903C0C2B08A9F400EB69ED /* Components */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -431,6 +439,39 @@
 				30903BE72B08A37800EB69ED /* SearchResult.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		30903C0C2B08A9F400EB69ED /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				30903C0D2B08A9F400EB69ED /* Image */,
+				30903C0F2B08A9F400EB69ED /* Button */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		30903C0D2B08A9F400EB69ED /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				30903C0E2B08A9F400EB69ED /* ProductImage.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		30903C0F2B08A9F400EB69ED /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				30903C102B08A9F400EB69ED /* BorderPaddingButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		30903C132B08AA9800EB69ED /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				30903C142B08AA9800EB69ED /* ColorPalette.swift */,
+			);
+			path = Color;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -572,16 +613,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				30903BF92B08A42400EB69ED /* APILoggerPlugin.swift in Sources */,
+				30903C122B08A9F400EB69ED /* BorderPaddingButton.swift in Sources */,
 				30903B8B2B089E7A00EB69ED /* ContentView.swift in Sources */,
 				30903BED2B08A37800EB69ED /* BookSearchRequest.swift in Sources */,
 				30903BEE2B08A37800EB69ED /* SearchResult.swift in Sources */,
+				30903C112B08A9F400EB69ED /* ProductImage.swift in Sources */,
 				30903BDD2B08A37300EB69ED /* ReadingModesDTO.swift in Sources */,
 				30903BFA2B08A42400EB69ED /* NetworkProvider.swift in Sources */,
 				30903BD52B08A37300EB69ED /* KeyChainService.swift in Sources */,
-				30903BEF2B08A37800EB69ED /* GetProductsUsecase.swift in Sources */,
+				30903BEF2B08A37800EB69ED /* GetBookListUsecase.swift in Sources */,
 				30903C052B08A45C00EB69ED /* Encodable+Sugar.swift in Sources */,
 				30903BD42B08A37300EB69ED /* KeyChainServiceKey.swift in Sources */,
 				30903BE12B08A37300EB69ED /* AccessInformationDTO.swift in Sources */,
+				30903C152B08AA9800EB69ED /* ColorPalette.swift in Sources */,
 				30903BD92B08A37300EB69ED /* BookInformationDTO.swift in Sources */,
 				30903BDE2B08A37300EB69ED /* SearchResultDTO.swift in Sources */,
 				30903B892B089E7A00EB69ED /* SwiftUI_MVVM_CleanArchitectureApp.swift in Sources */,
