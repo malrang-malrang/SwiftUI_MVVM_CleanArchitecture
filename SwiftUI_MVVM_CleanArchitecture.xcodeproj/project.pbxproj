@@ -28,7 +28,7 @@
 		30903BDD2B08A37300EB69ED /* ReadingModesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BCD2B08A37300EB69ED /* ReadingModesDTO.swift */; };
 		30903BDE2B08A37300EB69ED /* SearchResultDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BCE2B08A37300EB69ED /* SearchResultDTO.swift */; };
 		30903BDF2B08A37300EB69ED /* LayerInfoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BCF2B08A37300EB69ED /* LayerInfoDTO.swift */; };
-		30903BE02B08A37300EB69ED /* VolumeInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BD02B08A37300EB69ED /* VolumeInformationDTO.swift */; };
+		30903BE02B08A37300EB69ED /* ProductDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BD02B08A37300EB69ED /* ProductDTO.swift */; };
 		30903BE12B08A37300EB69ED /* AccessInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BD12B08A37300EB69ED /* AccessInformationDTO.swift */; };
 		30903BE22B08A37300EB69ED /* DimensionsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BD22B08A37300EB69ED /* DimensionsDTO.swift */; };
 		30903BE32B08A37300EB69ED /* PanelizationSummaryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BD32B08A37300EB69ED /* PanelizationSummaryDTO.swift */; };
@@ -84,7 +84,7 @@
 		30903BCD2B08A37300EB69ED /* ReadingModesDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingModesDTO.swift; sourceTree = "<group>"; };
 		30903BCE2B08A37300EB69ED /* SearchResultDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultDTO.swift; sourceTree = "<group>"; };
 		30903BCF2B08A37300EB69ED /* LayerInfoDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerInfoDTO.swift; sourceTree = "<group>"; };
-		30903BD02B08A37300EB69ED /* VolumeInformationDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeInformationDTO.swift; sourceTree = "<group>"; };
+		30903BD02B08A37300EB69ED /* ProductDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDTO.swift; sourceTree = "<group>"; };
 		30903BD12B08A37300EB69ED /* AccessInformationDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessInformationDTO.swift; sourceTree = "<group>"; };
 		30903BD22B08A37300EB69ED /* DimensionsDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimensionsDTO.swift; sourceTree = "<group>"; };
 		30903BD32B08A37300EB69ED /* PanelizationSummaryDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanelizationSummaryDTO.swift; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 				30903BCD2B08A37300EB69ED /* ReadingModesDTO.swift */,
 				30903BCE2B08A37300EB69ED /* SearchResultDTO.swift */,
 				30903BCF2B08A37300EB69ED /* LayerInfoDTO.swift */,
-				30903BD02B08A37300EB69ED /* VolumeInformationDTO.swift */,
+				30903BD02B08A37300EB69ED /* ProductDTO.swift */,
 				30903BD12B08A37300EB69ED /* AccessInformationDTO.swift */,
 				30903BD22B08A37300EB69ED /* DimensionsDTO.swift */,
 				30903BD32B08A37300EB69ED /* PanelizationSummaryDTO.swift */,
@@ -303,8 +303,8 @@
 		30903BE52B08A37800EB69ED /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				30903BE62B08A37800EB69ED /* BookSearchRequest.swift */,
-				30903BE72B08A37800EB69ED /* SearchResult.swift */,
+				30903C0B2B08A82F00EB69ED /* Model */,
+				30903C0A2B08A82200EB69ED /* Request */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -415,6 +415,22 @@
 				30903C042B08A45C00EB69ED /* FrameDebugModifier.swift */,
 			);
 			path = Debug;
+			sourceTree = "<group>";
+		};
+		30903C0A2B08A82200EB69ED /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				30903BE62B08A37800EB69ED /* BookSearchRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		30903C0B2B08A82F00EB69ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30903BE72B08A37800EB69ED /* SearchResult.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -577,7 +593,7 @@
 				30903BE32B08A37300EB69ED /* PanelizationSummaryDTO.swift in Sources */,
 				30903BDC2B08A37300EB69ED /* ImageLinksDTO.swift in Sources */,
 				30903BD62B08A37300EB69ED /* ImageCacheService.swift in Sources */,
-				30903BE02B08A37300EB69ED /* VolumeInformationDTO.swift in Sources */,
+				30903BE02B08A37300EB69ED /* ProductDTO.swift in Sources */,
 				30903BF02B08A37800EB69ED /* GoogleBooksRepository.swift in Sources */,
 				30903BD82B08A37300EB69ED /* GoogleBooksAPI.swift in Sources */,
 				30903C062B08A45C00EB69ED /* Color+Sugar.swift in Sources */,

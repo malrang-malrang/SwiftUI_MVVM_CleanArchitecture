@@ -12,7 +12,7 @@ struct BookInformationDTO: Decodable {
   let id: String?
   let selfLink: String?
   let etag: String?
-  let volumeInfo: VolumeInformationDTO?
+  let volumeInfo: ProductDTO?
   let layerInfo: LayerInfoDTO?
   let saleInfo: SaleInformationDTO?
   let accessInfo: AccessInformationDTO?
@@ -23,6 +23,16 @@ extension BookInformationDTO {
     return BookInformation(
       id: self.id ?? UUID().uuidString,
       volumeInfo: self.volumeInfo.map { $0.toDomain() }
+      ?? Product(
+        title: "",
+        authors: [],
+        publisher: "",
+        publishedDate: "",
+        description: "",
+        pageCount: 0,
+        categories: [],
+        imageLinks: ImageLinks(thumbnail: "", small: "")
+      )
     )
   }
 }

@@ -16,8 +16,8 @@ struct SearchResultDTO: Decodable {
 extension SearchResultDTO {
   func toDomain() -> SearchResult {
     return SearchResult(
-      totalItems: self.totalItems,
-      items: self.items?.map { $0.toDomain() }
+      totalItems: self.totalItems ?? 0,
+      items: self.items?.map { $0.toDomain() } ?? []
     )
   }
 }

@@ -8,13 +8,13 @@
 import Foundation
 
 struct SearchResult {
-  let totalItems: Int?
-  let items: [BookInformation]?
+  let totalItems: Int
+  let items: [BookInformation]
 }
 
 struct BookInformation: Identifiable {
   let id: String
-  let volumeInfo: Product?
+  let volumeInfo: Product
 }
 
 struct Product {
@@ -25,7 +25,7 @@ struct Product {
   let description: String
   let pageCount: Int
   let categories: [String]
-  let imageLinks: ImageLinks?
+  let imageLinks: ImageLinks
 }
 
 struct ImageLinks {

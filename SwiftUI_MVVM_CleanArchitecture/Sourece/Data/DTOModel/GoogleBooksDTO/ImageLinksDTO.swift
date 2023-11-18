@@ -20,7 +20,7 @@ extension ImageLinksDTO {
   func toDomain() -> ImageLinks {
     return ImageLinks(
       thumbnail: self.thumbnail ?? "",
-      small: self.small ?? "")
-
+      small: self.small ?? ""
+    )
   }
 }

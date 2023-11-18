@@ -1,5 +1,5 @@
 //
-//  VolumeInformationDTO.swift
+//  ProductDTO.swift
 //  iOS-malrangBookFinder
 //
 //  Created by 김동욱 on 2022/10/12.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct VolumeInformationDTO: Decodable {
+struct ProductDTO: Decodable {
   let title: String?
   let subtitle: String?
   let authors: [String]?
@@ -34,7 +34,7 @@ struct VolumeInformationDTO: Decodable {
   let canonicalVolumeLink: String?
 }
 
-extension VolumeInformationDTO {
+extension ProductDTO {
   func toDomain() -> Product {
     return Product(
       title: self.title ?? "",
@@ -44,7 +44,8 @@ extension VolumeInformationDTO {
       description: self.description ?? "",
       pageCount: self.pageCount ?? 0,
       categories: self.categories ?? [],
-      imageLinks: self.imageLinks?.toDomain()
+      imageLinks: self.imageLinks?.toDomain() 
+      ?? ImageLinks(thumbnail: "", small: "")
     )
   }
 }
