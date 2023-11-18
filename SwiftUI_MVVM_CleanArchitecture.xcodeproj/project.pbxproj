@@ -45,6 +45,16 @@
 		30903C112B08A9F400EB69ED /* ProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C0E2B08A9F400EB69ED /* ProductImage.swift */; };
 		30903C122B08A9F400EB69ED /* BorderPaddingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C102B08A9F400EB69ED /* BorderPaddingButton.swift */; };
 		30903C152B08AA9800EB69ED /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C142B08AA9800EB69ED /* ColorPalette.swift */; };
+		30903C212B08ABAE00EB69ED /* NanumSquare_acR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C172B08ABAE00EB69ED /* NanumSquare_acR.ttf */; };
+		30903C222B08ABAE00EB69ED /* Nexa-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C182B08ABAE00EB69ED /* Nexa-ExtraLight.otf */; };
+		30903C232B08ABAE00EB69ED /* NanumSquare_acB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C192B08ABAE00EB69ED /* NanumSquare_acB.ttf */; };
+		30903C242B08ABAE00EB69ED /* Nexa-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C1A2B08ABAE00EB69ED /* Nexa-ExtraBold.otf */; };
+		30903C252B08ABAE00EB69ED /* Nexa-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C1B2B08ABAE00EB69ED /* Nexa-Bold.otf */; };
+		30903C262B08ABAE00EB69ED /* NanumSquare_acL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C1C2B08ABAE00EB69ED /* NanumSquare_acL.ttf */; };
+		30903C272B08ABAE00EB69ED /* Nexa-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C1D2B08ABAE00EB69ED /* Nexa-Light.otf */; };
+		30903C282B08ABAE00EB69ED /* NanumSquare_acEB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C1E2B08ABAE00EB69ED /* NanumSquare_acEB.ttf */; };
+		30903C292B08ABAE00EB69ED /* Nexa-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C1F2B08ABAE00EB69ED /* Nexa-Heavy.otf */; };
+		30903C2A2B08ABAE00EB69ED /* Nexa-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C202B08ABAE00EB69ED /* Nexa-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +114,16 @@
 		30903C0E2B08A9F400EB69ED /* ProductImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductImage.swift; sourceTree = "<group>"; };
 		30903C102B08A9F400EB69ED /* BorderPaddingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderPaddingButton.swift; sourceTree = "<group>"; };
 		30903C142B08AA9800EB69ED /* ColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		30903C172B08ABAE00EB69ED /* NanumSquare_acR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquare_acR.ttf; sourceTree = "<group>"; };
+		30903C182B08ABAE00EB69ED /* Nexa-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-ExtraLight.otf"; sourceTree = "<group>"; };
+		30903C192B08ABAE00EB69ED /* NanumSquare_acB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquare_acB.ttf; sourceTree = "<group>"; };
+		30903C1A2B08ABAE00EB69ED /* Nexa-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-ExtraBold.otf"; sourceTree = "<group>"; };
+		30903C1B2B08ABAE00EB69ED /* Nexa-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Bold.otf"; sourceTree = "<group>"; };
+		30903C1C2B08ABAE00EB69ED /* NanumSquare_acL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquare_acL.ttf; sourceTree = "<group>"; };
+		30903C1D2B08ABAE00EB69ED /* Nexa-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Light.otf"; sourceTree = "<group>"; };
+		30903C1E2B08ABAE00EB69ED /* NanumSquare_acEB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquare_acEB.ttf; sourceTree = "<group>"; };
+		30903C1F2B08ABAE00EB69ED /* Nexa-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Heavy.otf"; sourceTree = "<group>"; };
+		30903C202B08ABAE00EB69ED /* Nexa-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +217,7 @@
 			children = (
 				30903BB42B089FE100EB69ED /* Assets */,
 				30903C132B08AA9800EB69ED /* Color */,
+				30903C162B08ABAE00EB69ED /* Fonts */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -474,6 +495,23 @@
 			path = Color;
 			sourceTree = "<group>";
 		};
+		30903C162B08ABAE00EB69ED /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				30903C172B08ABAE00EB69ED /* NanumSquare_acR.ttf */,
+				30903C182B08ABAE00EB69ED /* Nexa-ExtraLight.otf */,
+				30903C192B08ABAE00EB69ED /* NanumSquare_acB.ttf */,
+				30903C1A2B08ABAE00EB69ED /* Nexa-ExtraBold.otf */,
+				30903C1B2B08ABAE00EB69ED /* Nexa-Bold.otf */,
+				30903C1C2B08ABAE00EB69ED /* NanumSquare_acL.ttf */,
+				30903C1D2B08ABAE00EB69ED /* Nexa-Light.otf */,
+				30903C1E2B08ABAE00EB69ED /* NanumSquare_acEB.ttf */,
+				30903C1F2B08ABAE00EB69ED /* Nexa-Heavy.otf */,
+				30903C202B08ABAE00EB69ED /* Nexa-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -586,8 +624,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30903C212B08ABAE00EB69ED /* NanumSquare_acR.ttf in Resources */,
 				30903B902B089E7C00EB69ED /* Preview Assets.xcassets in Resources */,
+				30903C2A2B08ABAE00EB69ED /* Nexa-Regular.otf in Resources */,
+				30903C282B08ABAE00EB69ED /* NanumSquare_acEB.ttf in Resources */,
+				30903C292B08ABAE00EB69ED /* Nexa-Heavy.otf in Resources */,
 				30903B8D2B089E7C00EB69ED /* Assets.xcassets in Resources */,
+				30903C222B08ABAE00EB69ED /* Nexa-ExtraLight.otf in Resources */,
+				30903C232B08ABAE00EB69ED /* NanumSquare_acB.ttf in Resources */,
+				30903C242B08ABAE00EB69ED /* Nexa-ExtraBold.otf in Resources */,
+				30903C272B08ABAE00EB69ED /* Nexa-Light.otf in Resources */,
+				30903C262B08ABAE00EB69ED /* NanumSquare_acL.ttf in Resources */,
+				30903C252B08ABAE00EB69ED /* Nexa-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
