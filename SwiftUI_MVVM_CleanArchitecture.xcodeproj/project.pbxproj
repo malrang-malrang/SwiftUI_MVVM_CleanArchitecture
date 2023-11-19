@@ -34,7 +34,7 @@
 		30903BE32B08A37300EB69ED /* PanelizationSummaryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BD32B08A37300EB69ED /* PanelizationSummaryDTO.swift */; };
 		30903BED2B08A37800EB69ED /* BookSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BE62B08A37800EB69ED /* BookSearchRequest.swift */; };
 		30903BEE2B08A37800EB69ED /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BE72B08A37800EB69ED /* SearchResult.swift */; };
-		30903BEF2B08A37800EB69ED /* GetProductsUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BEA2B08A37800EB69ED /* GetProductsUsecase.swift */; };
+		30903BEF2B08A37800EB69ED /* GetBookListUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BEA2B08A37800EB69ED /* GetBookListUsecase.swift */; };
 		30903BF02B08A37800EB69ED /* GoogleBooksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BEC2B08A37800EB69ED /* GoogleBooksRepository.swift */; };
 		30903BF92B08A42400EB69ED /* APILoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BF62B08A42400EB69ED /* APILoggerPlugin.swift */; };
 		30903BFA2B08A42400EB69ED /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BF82B08A42400EB69ED /* NetworkProvider.swift */; };
@@ -42,6 +42,20 @@
 		30903C062B08A45C00EB69ED /* Color+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BFE2B08A45C00EB69ED /* Color+Sugar.swift */; };
 		30903C072B08A45C00EB69ED /* Result+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BFF2B08A45C00EB69ED /* Result+Sugar.swift */; };
 		30903C092B08A45C00EB69ED /* FrameDebugModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C042B08A45C00EB69ED /* FrameDebugModifier.swift */; };
+		30903C112B08A9F400EB69ED /* ProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C0E2B08A9F400EB69ED /* ProductImage.swift */; };
+		30903C122B08A9F400EB69ED /* BorderPaddingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C102B08A9F400EB69ED /* BorderPaddingButton.swift */; };
+		30903C152B08AA9800EB69ED /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C142B08AA9800EB69ED /* ColorPalette.swift */; };
+		30903C212B08ABAE00EB69ED /* NanumSquare_acR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C172B08ABAE00EB69ED /* NanumSquare_acR.ttf */; };
+		30903C222B08ABAE00EB69ED /* Nexa-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C182B08ABAE00EB69ED /* Nexa-ExtraLight.otf */; };
+		30903C232B08ABAE00EB69ED /* NanumSquare_acB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C192B08ABAE00EB69ED /* NanumSquare_acB.ttf */; };
+		30903C242B08ABAE00EB69ED /* Nexa-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C1A2B08ABAE00EB69ED /* Nexa-ExtraBold.otf */; };
+		30903C252B08ABAE00EB69ED /* Nexa-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C1B2B08ABAE00EB69ED /* Nexa-Bold.otf */; };
+		30903C262B08ABAE00EB69ED /* NanumSquare_acL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C1C2B08ABAE00EB69ED /* NanumSquare_acL.ttf */; };
+		30903C272B08ABAE00EB69ED /* Nexa-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C1D2B08ABAE00EB69ED /* Nexa-Light.otf */; };
+		30903C282B08ABAE00EB69ED /* NanumSquare_acEB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C1E2B08ABAE00EB69ED /* NanumSquare_acEB.ttf */; };
+		30903C292B08ABAE00EB69ED /* Nexa-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C1F2B08ABAE00EB69ED /* Nexa-Heavy.otf */; };
+		30903C2A2B08ABAE00EB69ED /* Nexa-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C202B08ABAE00EB69ED /* Nexa-Regular.otf */; };
+		30903C2F2B0A383200EB69ED /* BusinessInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C2E2B0A383100EB69ED /* BusinessInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +104,7 @@
 		30903BD32B08A37300EB69ED /* PanelizationSummaryDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanelizationSummaryDTO.swift; sourceTree = "<group>"; };
 		30903BE62B08A37800EB69ED /* BookSearchRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookSearchRequest.swift; sourceTree = "<group>"; };
 		30903BE72B08A37800EB69ED /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
-		30903BEA2B08A37800EB69ED /* GetProductsUsecase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetProductsUsecase.swift; sourceTree = "<group>"; };
+		30903BEA2B08A37800EB69ED /* GetBookListUsecase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetBookListUsecase.swift; sourceTree = "<group>"; };
 		30903BEC2B08A37800EB69ED /* GoogleBooksRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleBooksRepository.swift; sourceTree = "<group>"; };
 		30903BF62B08A42400EB69ED /* APILoggerPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APILoggerPlugin.swift; sourceTree = "<group>"; };
 		30903BF82B08A42400EB69ED /* NetworkProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
@@ -98,6 +112,20 @@
 		30903BFE2B08A45C00EB69ED /* Color+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Sugar.swift"; sourceTree = "<group>"; };
 		30903BFF2B08A45C00EB69ED /* Result+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+Sugar.swift"; sourceTree = "<group>"; };
 		30903C042B08A45C00EB69ED /* FrameDebugModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameDebugModifier.swift; sourceTree = "<group>"; };
+		30903C0E2B08A9F400EB69ED /* ProductImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductImage.swift; sourceTree = "<group>"; };
+		30903C102B08A9F400EB69ED /* BorderPaddingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderPaddingButton.swift; sourceTree = "<group>"; };
+		30903C142B08AA9800EB69ED /* ColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		30903C172B08ABAE00EB69ED /* NanumSquare_acR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquare_acR.ttf; sourceTree = "<group>"; };
+		30903C182B08ABAE00EB69ED /* Nexa-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-ExtraLight.otf"; sourceTree = "<group>"; };
+		30903C192B08ABAE00EB69ED /* NanumSquare_acB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquare_acB.ttf; sourceTree = "<group>"; };
+		30903C1A2B08ABAE00EB69ED /* Nexa-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-ExtraBold.otf"; sourceTree = "<group>"; };
+		30903C1B2B08ABAE00EB69ED /* Nexa-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Bold.otf"; sourceTree = "<group>"; };
+		30903C1C2B08ABAE00EB69ED /* NanumSquare_acL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquare_acL.ttf; sourceTree = "<group>"; };
+		30903C1D2B08ABAE00EB69ED /* Nexa-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Light.otf"; sourceTree = "<group>"; };
+		30903C1E2B08ABAE00EB69ED /* NanumSquare_acEB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquare_acEB.ttf; sourceTree = "<group>"; };
+		30903C1F2B08ABAE00EB69ED /* Nexa-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Heavy.otf"; sourceTree = "<group>"; };
+		30903C202B08ABAE00EB69ED /* Nexa-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Regular.otf"; sourceTree = "<group>"; };
+		30903C2E2B0A383100EB69ED /* BusinessInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				30903BB42B089FE100EB69ED /* Assets */,
+				30903C132B08AA9800EB69ED /* Color */,
+				30903C162B08ABAE00EB69ED /* Fonts */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -320,7 +350,7 @@
 		30903BE92B08A37800EB69ED /* Book */ = {
 			isa = PBXGroup;
 			children = (
-				30903BEA2B08A37800EB69ED /* GetProductsUsecase.swift */,
+				30903BEA2B08A37800EB69ED /* GetBookListUsecase.swift */,
 			);
 			path = Book;
 			sourceTree = "<group>";
@@ -345,6 +375,8 @@
 		30903BF22B08A3CB00EB69ED /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				30903C0C2B08A9F400EB69ED /* Components */,
+				30903C2B2B0A380500EB69ED /* Main */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -431,6 +463,72 @@
 				30903BE72B08A37800EB69ED /* SearchResult.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		30903C0C2B08A9F400EB69ED /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				30903C2D2B0A382200EB69ED /* View */,
+				30903C0D2B08A9F400EB69ED /* Image */,
+				30903C0F2B08A9F400EB69ED /* Button */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		30903C0D2B08A9F400EB69ED /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				30903C0E2B08A9F400EB69ED /* ProductImage.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		30903C0F2B08A9F400EB69ED /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				30903C102B08A9F400EB69ED /* BorderPaddingButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		30903C132B08AA9800EB69ED /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				30903C142B08AA9800EB69ED /* ColorPalette.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		30903C162B08ABAE00EB69ED /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				30903C172B08ABAE00EB69ED /* NanumSquare_acR.ttf */,
+				30903C182B08ABAE00EB69ED /* Nexa-ExtraLight.otf */,
+				30903C192B08ABAE00EB69ED /* NanumSquare_acB.ttf */,
+				30903C1A2B08ABAE00EB69ED /* Nexa-ExtraBold.otf */,
+				30903C1B2B08ABAE00EB69ED /* Nexa-Bold.otf */,
+				30903C1C2B08ABAE00EB69ED /* NanumSquare_acL.ttf */,
+				30903C1D2B08ABAE00EB69ED /* Nexa-Light.otf */,
+				30903C1E2B08ABAE00EB69ED /* NanumSquare_acEB.ttf */,
+				30903C1F2B08ABAE00EB69ED /* Nexa-Heavy.otf */,
+				30903C202B08ABAE00EB69ED /* Nexa-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		30903C2B2B0A380500EB69ED /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		30903C2D2B0A382200EB69ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30903C2E2B0A383100EB69ED /* BusinessInfoView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -545,8 +643,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30903C212B08ABAE00EB69ED /* NanumSquare_acR.ttf in Resources */,
 				30903B902B089E7C00EB69ED /* Preview Assets.xcassets in Resources */,
+				30903C2A2B08ABAE00EB69ED /* Nexa-Regular.otf in Resources */,
+				30903C282B08ABAE00EB69ED /* NanumSquare_acEB.ttf in Resources */,
+				30903C292B08ABAE00EB69ED /* Nexa-Heavy.otf in Resources */,
 				30903B8D2B089E7C00EB69ED /* Assets.xcassets in Resources */,
+				30903C222B08ABAE00EB69ED /* Nexa-ExtraLight.otf in Resources */,
+				30903C232B08ABAE00EB69ED /* NanumSquare_acB.ttf in Resources */,
+				30903C242B08ABAE00EB69ED /* Nexa-ExtraBold.otf in Resources */,
+				30903C272B08ABAE00EB69ED /* Nexa-Light.otf in Resources */,
+				30903C262B08ABAE00EB69ED /* NanumSquare_acL.ttf in Resources */,
+				30903C252B08ABAE00EB69ED /* Nexa-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,16 +680,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				30903BF92B08A42400EB69ED /* APILoggerPlugin.swift in Sources */,
+				30903C122B08A9F400EB69ED /* BorderPaddingButton.swift in Sources */,
 				30903B8B2B089E7A00EB69ED /* ContentView.swift in Sources */,
 				30903BED2B08A37800EB69ED /* BookSearchRequest.swift in Sources */,
+				30903C2F2B0A383200EB69ED /* BusinessInfoView.swift in Sources */,
 				30903BEE2B08A37800EB69ED /* SearchResult.swift in Sources */,
+				30903C112B08A9F400EB69ED /* ProductImage.swift in Sources */,
 				30903BDD2B08A37300EB69ED /* ReadingModesDTO.swift in Sources */,
 				30903BFA2B08A42400EB69ED /* NetworkProvider.swift in Sources */,
 				30903BD52B08A37300EB69ED /* KeyChainService.swift in Sources */,
-				30903BEF2B08A37800EB69ED /* GetProductsUsecase.swift in Sources */,
+				30903BEF2B08A37800EB69ED /* GetBookListUsecase.swift in Sources */,
 				30903C052B08A45C00EB69ED /* Encodable+Sugar.swift in Sources */,
 				30903BD42B08A37300EB69ED /* KeyChainServiceKey.swift in Sources */,
 				30903BE12B08A37300EB69ED /* AccessInformationDTO.swift in Sources */,
+				30903C152B08AA9800EB69ED /* ColorPalette.swift in Sources */,
 				30903BD92B08A37300EB69ED /* BookInformationDTO.swift in Sources */,
 				30903BDE2B08A37300EB69ED /* SearchResultDTO.swift in Sources */,
 				30903B892B089E7A00EB69ED /* SwiftUI_MVVM_CleanArchitectureApp.swift in Sources */,
