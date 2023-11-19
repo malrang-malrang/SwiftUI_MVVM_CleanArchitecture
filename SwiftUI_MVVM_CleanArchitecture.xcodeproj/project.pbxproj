@@ -56,6 +56,7 @@
 		30903C292B08ABAE00EB69ED /* Nexa-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C1F2B08ABAE00EB69ED /* Nexa-Heavy.otf */; };
 		30903C2A2B08ABAE00EB69ED /* Nexa-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C202B08ABAE00EB69ED /* Nexa-Regular.otf */; };
 		30903C2F2B0A383200EB69ED /* BusinessInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C2E2B0A383100EB69ED /* BusinessInfoView.swift */; };
+		30903C342B0A3A2400EB69ED /* LuanchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C332B0A3A2400EB69ED /* LuanchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		30903C1F2B08ABAE00EB69ED /* Nexa-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Heavy.otf"; sourceTree = "<group>"; };
 		30903C202B08ABAE00EB69ED /* Nexa-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Regular.otf"; sourceTree = "<group>"; };
 		30903C2E2B0A383100EB69ED /* BusinessInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessInfoView.swift; sourceTree = "<group>"; };
+		30903C332B0A3A2400EB69ED /* LuanchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuanchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -376,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				30903C0C2B08A9F400EB69ED /* Components */,
+				30903C302B0A39DA00EB69ED /* Luanch */,
 				30903C2B2B0A380500EB69ED /* Main */,
 			);
 			path = Presentation;
@@ -529,6 +532,30 @@
 				30903C2E2B0A383100EB69ED /* BusinessInfoView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		30903C302B0A39DA00EB69ED /* Luanch */ = {
+			isa = PBXGroup;
+			children = (
+				30903C322B0A39F200EB69ED /* ViewModel */,
+				30903C312B0A39EE00EB69ED /* View */,
+			);
+			path = Luanch;
+			sourceTree = "<group>";
+		};
+		30903C312B0A39EE00EB69ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30903C332B0A3A2400EB69ED /* LuanchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30903C322B0A39F200EB69ED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -695,6 +722,7 @@
 				30903BE12B08A37300EB69ED /* AccessInformationDTO.swift in Sources */,
 				30903C152B08AA9800EB69ED /* ColorPalette.swift in Sources */,
 				30903BD92B08A37300EB69ED /* BookInformationDTO.swift in Sources */,
+				30903C342B0A3A2400EB69ED /* LuanchView.swift in Sources */,
 				30903BDE2B08A37300EB69ED /* SearchResultDTO.swift in Sources */,
 				30903B892B089E7A00EB69ED /* SwiftUI_MVVM_CleanArchitectureApp.swift in Sources */,
 				30903BDA2B08A37300EB69ED /* SaleInformationDTO.swift in Sources */,
@@ -799,7 +827,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -856,7 +884,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

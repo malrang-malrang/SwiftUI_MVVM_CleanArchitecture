@@ -1,0 +1,13 @@
+{
+    "hash": "1",
+    "name": "감자",
+    "brand": "강원도",
+    "sellPrc": 4500,
+    "normalPrc": 5000,
+    "imgUrl": "https://source.unsplash.com/random/300×300",
+    "reviewCount": 50,
+    "reviewAvg": 3,
+    "discountRate": 10,
+    "tags": ["BEST", "FREE_DELIVERY"],
+    "soldOut": false
+}
