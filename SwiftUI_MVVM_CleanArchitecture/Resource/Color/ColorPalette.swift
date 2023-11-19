@@ -19,4 +19,8 @@ enum ColorPalette {
     static var gray6 = Color(hexString: "868e96")
     static var gray7 = Color(hexString: "495057")
   }
+
+  enum Pink {
+    static var pink1 = Color(hexString: "fed6e5")
+  }
 }
