@@ -55,6 +55,7 @@
 		30903C282B08ABAE00EB69ED /* NanumSquare_acEB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C1E2B08ABAE00EB69ED /* NanumSquare_acEB.ttf */; };
 		30903C292B08ABAE00EB69ED /* Nexa-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C1F2B08ABAE00EB69ED /* Nexa-Heavy.otf */; };
 		30903C2A2B08ABAE00EB69ED /* Nexa-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C202B08ABAE00EB69ED /* Nexa-Regular.otf */; };
+		30903C2F2B0A383200EB69ED /* BusinessInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C2E2B0A383100EB69ED /* BusinessInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		30903C1E2B08ABAE00EB69ED /* NanumSquare_acEB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquare_acEB.ttf; sourceTree = "<group>"; };
 		30903C1F2B08ABAE00EB69ED /* Nexa-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Heavy.otf"; sourceTree = "<group>"; };
 		30903C202B08ABAE00EB69ED /* Nexa-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Regular.otf"; sourceTree = "<group>"; };
+		30903C2E2B0A383100EB69ED /* BusinessInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				30903C0C2B08A9F400EB69ED /* Components */,
+				30903C2B2B0A380500EB69ED /* Main */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 		30903C0C2B08A9F400EB69ED /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				30903C2D2B0A382200EB69ED /* View */,
 				30903C0D2B08A9F400EB69ED /* Image */,
 				30903C0F2B08A9F400EB69ED /* Button */,
 			);
@@ -510,6 +514,21 @@
 				30903C202B08ABAE00EB69ED /* Nexa-Regular.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		30903C2B2B0A380500EB69ED /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		30903C2D2B0A382200EB69ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30903C2E2B0A383100EB69ED /* BusinessInfoView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -664,6 +683,7 @@
 				30903C122B08A9F400EB69ED /* BorderPaddingButton.swift in Sources */,
 				30903B8B2B089E7A00EB69ED /* ContentView.swift in Sources */,
 				30903BED2B08A37800EB69ED /* BookSearchRequest.swift in Sources */,
+				30903C2F2B0A383200EB69ED /* BusinessInfoView.swift in Sources */,
 				30903BEE2B08A37800EB69ED /* SearchResult.swift in Sources */,
 				30903C112B08A9F400EB69ED /* ProductImage.swift in Sources */,
 				30903BDD2B08A37300EB69ED /* ReadingModesDTO.swift in Sources */,
