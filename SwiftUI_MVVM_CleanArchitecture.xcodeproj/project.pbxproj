@@ -64,6 +64,9 @@
 		30903C452B0CE44600EB69ED /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C442B0CE44600EB69ED /* Coordinator.swift */; };
 		30903C482B0CE4CF00EB69ED /* AppDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C472B0CE4CF00EB69ED /* AppDestination.swift */; };
 		30903C4A2B0CE50200EB69ED /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C492B0CE50200EB69ED /* AppCoordinator.swift */; };
+		30903C4D2B0CED1800EB69ED /* MainDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C4C2B0CED1800EB69ED /* MainDestination.swift */; };
+		30903C542B0CEF2200EB69ED /* TabContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C532B0CEF2200EB69ED /* TabContainerView.swift */; };
+		30903C562B0CF04D00EB69ED /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C552B0CF04D00EB69ED /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +145,9 @@
 		30903C442B0CE44600EB69ED /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		30903C472B0CE4CF00EB69ED /* AppDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDestination.swift; sourceTree = "<group>"; };
 		30903C492B0CE50200EB69ED /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		30903C4C2B0CED1800EB69ED /* MainDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDestination.swift; sourceTree = "<group>"; };
+		30903C532B0CEF2200EB69ED /* TabContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContainerView.swift; sourceTree = "<group>"; };
+		30903C552B0CF04D00EB69ED /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -394,8 +400,7 @@
 			children = (
 				30903C3D2B0CDF6B00EB69ED /* Protocol */,
 				30903C0C2B08A9F400EB69ED /* Components */,
-				30903C302B0A39DA00EB69ED /* Luanch */,
-				30903C2B2B0A380500EB69ED /* Main */,
+				30903C4F2B0CEE1500EB69ED /* Scene */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -539,6 +544,7 @@
 		30903C2B2B0A380500EB69ED /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				30903C502B0CEE3000EB69ED /* Tab */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -597,6 +603,7 @@
 			children = (
 				30903C412B0CE26200EB69ED /* Protocol */,
 				30903C462B0CE4BA00EB69ED /* AppCoordinator */,
+				30903C4B2B0CEA6500EB69ED /* MainCoordinator */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -617,6 +624,48 @@
 				30903C472B0CE4CF00EB69ED /* AppDestination.swift */,
 			);
 			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
+		30903C4B2B0CEA6500EB69ED /* MainCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				30903C552B0CF04D00EB69ED /* MainCoordinator.swift */,
+				30903C4C2B0CED1800EB69ED /* MainDestination.swift */,
+			);
+			path = MainCoordinator;
+			sourceTree = "<group>";
+		};
+		30903C4F2B0CEE1500EB69ED /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				30903C302B0A39DA00EB69ED /* Luanch */,
+				30903C2B2B0A380500EB69ED /* Main */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		30903C502B0CEE3000EB69ED /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				30903C512B0CEEF700EB69ED /* Container */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		30903C512B0CEEF700EB69ED /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				30903C522B0CEF0400EB69ED /* View */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		30903C522B0CEF0400EB69ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30903C532B0CEF2200EB69ED /* TabContainerView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -773,6 +822,7 @@
 				30903BED2B08A37800EB69ED /* BookSearchRequest.swift in Sources */,
 				30903C2F2B0A383200EB69ED /* BusinessInfoView.swift in Sources */,
 				30903BEE2B08A37800EB69ED /* SearchResult.swift in Sources */,
+				30903C542B0CEF2200EB69ED /* TabContainerView.swift in Sources */,
 				30903C452B0CE44600EB69ED /* Coordinator.swift in Sources */,
 				30903C112B08A9F400EB69ED /* ProductImage.swift in Sources */,
 				30903BDD2B08A37300EB69ED /* ReadingModesDTO.swift in Sources */,
@@ -783,6 +833,7 @@
 				30903BEF2B08A37800EB69ED /* GetBookListUsecase.swift in Sources */,
 				30903C052B08A45C00EB69ED /* Encodable+Sugar.swift in Sources */,
 				30903BD42B08A37300EB69ED /* KeyChainServiceKey.swift in Sources */,
+				30903C562B0CF04D00EB69ED /* MainCoordinator.swift in Sources */,
 				30903BE12B08A37300EB69ED /* AccessInformationDTO.swift in Sources */,
 				30903C152B08AA9800EB69ED /* ColorPalette.swift in Sources */,
 				30903BD92B08A37300EB69ED /* BookInformationDTO.swift in Sources */,
@@ -802,6 +853,7 @@
 				30903BE02B08A37300EB69ED /* ProductDTO.swift in Sources */,
 				30903C3F2B0CDF7600EB69ED /* ViewModelable.swift in Sources */,
 				30903BF02B08A37800EB69ED /* GoogleBooksRepository.swift in Sources */,
+				30903C4D2B0CED1800EB69ED /* MainDestination.swift in Sources */,
 				30903C482B0CE4CF00EB69ED /* AppDestination.swift in Sources */,
 				30903BD82B08A37300EB69ED /* GoogleBooksAPI.swift in Sources */,
 				30903C062B08A45C00EB69ED /* Color+Sugar.swift in Sources */,

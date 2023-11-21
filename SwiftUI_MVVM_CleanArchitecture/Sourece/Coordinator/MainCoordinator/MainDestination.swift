@@ -1,5 +1,5 @@
 //
-//  AppDestination.swift
+//  MainDestination.swift
 //  SwiftUI_MVVM_CleanArchitecture
 //
 //  Created by 김동욱 on 11/21/23.
@@ -7,7 +7,6 @@
 
 import Foundation
 
-enum AppDestination: Destination {
-  case luanch
-  case main(MainDestination)
+enum MainDestination: Destination {
+  case tab
 }

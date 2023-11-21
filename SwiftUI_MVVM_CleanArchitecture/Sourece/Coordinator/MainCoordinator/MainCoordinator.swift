@@ -1,5 +1,5 @@
 //
-//  AppCoordinator.swift
+//  MainCoordinator.swift
 //  SwiftUI_MVVM_CleanArchitecture
 //
 //  Created by 김동욱 on 11/21/23.
@@ -8,15 +8,17 @@
 import SwiftUI
 import Combine
 
-final class AppCoordinator: Coordinator {
-  private(set) var popToRootViewTriggerName = Notification.Name(rawValue: "PopToAppRoot")
+final class MainCoordinator: Coordinator {
+  private(set) var popToRootViewTriggerName = Notification.Name(rawValue: "PopToMainRoot")
   private var cancellable: Set<AnyCancellable> = []
-  var destination: AppDestination
+  var destination: MainDestination
   var isRoot: Bool
+  private unowned var parent: AppCoordinator
 
   @Published var navigationTrigger = false
 
-  init(destination: AppDestination = .luanch, isRoot: Bool = false) {
+  init(parent: AppCoordinator, destination: MainDestination = .tab, isRoot: Bool = false) {
+    self.parent = parent
     self.destination = destination
     self.isRoot = isRoot
 
@@ -31,13 +33,6 @@ final class AppCoordinator: Coordinator {
 
   @ViewBuilder
   func composeView() -> some View {
-    switch self.destination {
-    case .luanch:
-      let viewModel = LuanchViewMoel()
-      LuanchView(viewModel: viewModel)
-    case .main(let destination):
-      let coordinator = MainCoordinator(parent: self, destination: destination, isRoot: true)
-      coordinator.composeView()
-    }
+    EmptyView()
   }
 }
