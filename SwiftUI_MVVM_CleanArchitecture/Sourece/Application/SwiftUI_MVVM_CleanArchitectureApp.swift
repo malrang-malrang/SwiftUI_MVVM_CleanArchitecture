@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct SwiftUI_MVVM_CleanArchitectureApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      LuanchView(viewModel: LuanchViewMoel())
     }
+  }
 }

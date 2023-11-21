@@ -1,0 +1,321 @@
+{
+    "meta": {
+        "offset": 0,
+        "limit": 20,
+        "isFinal": false
+    },
+    "products": [
+        {
+            "hash": "CAEC17D84884ADDEEC35C3610645AB63",
+            "name": "티티 엄마차 카페인없는 루이보스 임산부 1일1차 30티백",
+            "brand": "|아크리코|",
+            "sellPrc": 13300,
+            "normalPrc": 15700,
+            "soldOut": false,
+            "imgUrl": "https://static.shop.mmtalk.kr/_data/product/202302/16/0b5e050d4683cf968ef1a604556143d1.jpg",
+            "reviewCount": 0,
+            "reviewAvg": 0,
+            "partnerNo": 193,
+            "tags": [],
+            "discountRate": 15
+        },
+        {
+            "hash": "F6A81A05F0DC6797D195DFB9AAD909BB",
+            "name": "허니 바닐라 카모마일 3개(60티백)",
+            "brand": "|셀레셜시즈닝스|",
+            "sellPrc": 14900,
+            "normalPrc": 20700,
+            "soldOut": false,
+            "imgUrl": "https://static.shop.mmtalk.kr/_data/product/202301/27/aa959d12955f3c73094b78cd36662445.jpg",
+            "reviewCount": 0,
+            "reviewAvg": 0,
+            "partnerNo": 176,
+            "tags": [
+                "FREE_DELIVERY"
+            ],
+            "discountRate": 28
+        },
+        {
+            "hash": "9DD3ECB6819C19341CCE4399AFA2C7DD",
+            "name": "레몬징거 3개(60티백)",
+            "brand": "|셀레셜시즈닝스|",
+            "sellPrc": 14900,
+            "normalPrc": 20700,
+            "soldOut": false,
+            "imgUrl": "https://static.shop.mmtalk.kr/_data/product/202301/27/965f6c1a9429794a80a5dce1c6c1a474.jpg",
+            "reviewCount": 19,
+            "reviewAvg": 4.8,
+            "partnerNo": 176,
+            "tags": [
+                "FREE_DELIVERY"
+            ],
+            "discountRate": 28
+        },
+        {
+            "hash": "ABA272665C5920476D90EC888904FB7B",
+            "name": "[~10/11특가] 1차완판★ 검정보리 3종 샘플러 2+2+2 (오리지널/라떼/바닐라라떼 6개입) 임산부커피 무카페인",
+            "brand": "|달차|",
+            "sellPrc": 11900,
+            "normalPrc": 17000,
+            "soldOut": false,
+            "imgUrl": "https://static.shop.mmtalk.kr/_data/product/202307/17/f4825ee0793b9360fa049f5e44632843.png",
+            "reviewCount": 10,
+            "reviewAvg": 4.4,
+            "partnerNo": 59,
+            "tags": [
+                "FREE_DELIVERY"
+            ],
+            "discountRate": 30
+        },
+        {
+            "hash": "6499E19D47D7CBD3302A26FDB40D0B41",
+            "name": "[~10/15특가] 매터니티 임산부 크림 x 플래진 조수아 임산부 샴푸",
+            "brand": "|부담제로|",
+            "sellPrc": 41900,
+            "normalPrc": 75000,
+            "soldOut": false,
+            "imgUrl": "https://static.shop.mmtalk.kr/_data/product/202304/13/187c6758ab41ac672963df188a7ac783.jpg",
+            "reviewCount": 0,
+            "reviewAvg": 0,
+            "partnerNo": 161,
+            "tags": [
+                "FREE_DELIVERY"
+            ],
+            "discountRate": 44
+        },
+        {
+            "hash": "F43764367FA4B73BA947FAE71B0223A4",
+            "name": "[~10/15특가] 매터니티 임산부 크림 500ml",
+            "brand": "|부담제로|",
+            "sellPrc": 21900,
+            "normalPrc": 37500,
+            "soldOut": false,
+            "imgUrl": "https://static.shop.mmtalk.kr/_data/product/202211/23/38385a2e18fc2993112b580d042bca50.png",
+            "reviewCount": 0,
+            "reviewAvg": 0,
+            "partnerNo": 161,
+            "tags": [
+                "FREE_DELIVERY"
+            ],
+            "discountRate": 41
+        },
+        {
+            "hash": "2FFE5AE29BB6B60145835654B541B443",
+            "name": "[~10/11특가] 헤이븐 에어 플렉스 아기띠",
+            "brand": "|비세이프|",
+            "sellPrc": 79000,
+            "normalPrc": 248000,
+            "soldOut": false,
+            "imgUrl": "https://static.shop.mmtalk.kr/_data/product/202304/18/1a8cb2f1d8a16ef55a047960c3d9de56.jpg",
+            "reviewCount": 0,
+            "reviewAvg": 0,
+            "partnerNo": 214,
+            "tags": [
+                "FREE_DELIVERY"
+            ],
+            "discountRate": 68
+        },
+        {
+            "hash": "135BC4E07E2F9B0C0FDB83C1C4D8B3E0",
+            "name": "[~10/11특가] 첫 발견 액티비티 아기 체육관",
+            "brand": "|브이텍|",
+            "sellPrc": 39800,
+            "normalPrc": 92000,
+            "soldOut": false,
+            "imgUrl": "https://static.shop.mmtalk.kr/_data/product/202304/18/24a1aa5bf9b0e56b3db5aff4a85f12d6.jpg",
+            "reviewCount": 0,
+            "reviewAvg": 0,
+            "partnerNo": 214,
+            "tags": [
+                "FREE_DELIVERY"
+            ],
+            "discountRate": 56
+        },
+        {
+            "hash": "BE5701AD6A0F85AD1DDCA69370AAC3A3",
+            "name": "스트레치 B i-size 신생아 카시트",
+            "brand": "|비세이프|",
+            "sellPrc": 4229800,
+            "normalPrc": 4229800,
+            "soldOut": false,
+            "imgUrl": "https://static.shop.mmtalk.kr/_data/product/202310/06/f8e00a40164aa26ce82e08e831997d19.jpg",
+            "reviewCount": 0,
+            "reviewAvg": 0,
+            "partnerNo": 214,
+            "tags": [
+                "FREE_DELIVERY"
+            ],
+            "discountRate": 0
+        },
+        {
+            "hash": "F86194E5108223325E2C43AA0997BB80",
+            "name": "[~10/11특가] 투웨이 물결 손목 보호대",
+            "brand": "|튼튼맘스|",
+            "sellPrc": 32900,
+            "normalPrc": 65900,
+            "soldOut": false,
+            "imgUrl": "https://static.shop.mmtalk.kr/_data/product/202310/09/b4bafb97c146d87f6751024281936e85.jpg",
+            "reviewCount": 0,
+            "reviewAvg": 0,
+            "partnerNo": 152,
+            "tags": [],
+            "discountRate": 50
+        },
+        {
+            "hash": "9AF7EA3259A69623A41B6E8BF98A52B4",
+            "name": "[~10/11특가] 베어리 잇더 도넛 방석",
+            "brand": "|튼튼맘스|",
+            "sellPrc": 43700,
+            "normalPrc": 87500,
+            "soldOut": false,
+            "imgUrl": "https://static.shop.mmtalk.kr/_data/product/202309/25/10b0001ffb1cfb24856d14293d79b957.jpg",
+            "reviewCount": 0,
+            "reviewAvg": 0,
+            "partnerNo": 152,
+            "tags": [],
+            "discountRate": 50
+        },
+        {
+            "hash": "4298F09989A95E881DD3C59E8E9ADBE1",
+            "name": "[~10/11특가] 비건 임산부 치약",
+            "brand": "|튼튼맘스|",
+            "sellPrc": 15400,
+            "normalPrc": 37700,
+            "soldOut": false,
+            "imgUrl": "https://static.shop.mmtalk.kr/_data/product/202210/26/1d02355e5578e046082df0b60448e595.jpg",
+            "reviewCount": 0,
+            "reviewAvg": 0,
+            "partnerNo": 152,
+            "tags": [],
+            "discountRate": 59
+        },
+        {
+            "hash": "52421AD78DF95E29F0B0F324EB6BA727",
+            "name": "프로텍티스 이지 드롭 프로바이오틱스 + 비타민D 10ml x 3개",
+            "brand": "|바이오가이아|",
+            "sellPrc": 477300,
+            "normalPrc": 860200,
+            "soldOut": false,
+            "imgUrl": "https://static.shop.mmtalk.kr/_data/product/202210/31/a84297a5d336a6b9bc13dfc80870cc89.jpg",
+            "reviewCount": 0,
+            "reviewAvg": 0,
+            "partnerNo": 151,
+            "tags": [
+                "FREE_DELIVERY"
+            ],
+            "discountRate": 44
+        },
+        {
+            "hash": "9DEF35BA40CA680672185B7E6D96A6AE",
+            "name": "프로텍티스 이지 드롭 프로바이오틱스 + 비타민D 10ml x 2개",
+            "brand": "|바이오가이아|",
+            "sellPrc": 294900,
+            "normalPrc": 496000,
+            "soldOut": false,
+            "imgUrl": "https://static.shop.mmtalk.kr/_data/product/202210/31/2655cdc12c5e04f7566f1e65f6c78aab.jpg",
+            "reviewCount": 0,
+            "reviewAvg": 0,
+            "partnerNo": 151,
+            "tags": [
+                "FREE_DELIVERY"
+            ],
+            "discountRate": 40
+        },
+        {
+            "hash": "7CFF95ABCC610F54FB7EC028DDD9803E",
+            "name": "프로텍티스 베이비 드롭 프로바이오틱스 5ml x 3개",
+            "brand": "|바이오가이아|",
+            "sellPrc": 256800,
+            "normalPrc": 452100,
+            "soldOut": false,
+            "imgUrl": "https://static.shop.mmtalk.kr/_data/product/202210/31/638d00df10327a6c33e4f25be58eee8b.jpg",
+            "reviewCount": 0,
+            "reviewAvg": 0,
+            "partnerNo": 151,
+            "tags": [
+                "FREE_DELIVERY"
+            ],
+            "discountRate": 43
+        },
+        {
+            "hash": "F1ED9B42AAD1B999647239402DA50936",
+            "name": "프로텍티스 베이비 드롭 프로바이오틱스 5ml x 2개",
+            "brand": "|바이오가이아|",
+            "sellPrc": 131600,
+            "normalPrc": 218900,
+            "soldOut": false,
+            "imgUrl": "https://static.shop.mmtalk.kr/_data/product/202210/31/2901874a84cf13aefeff23f456e095a1.jpg",
+            "reviewCount": 0,
+            "reviewAvg": 0,
+            "partnerNo": 151,
+            "tags": [
+                "FREE_DELIVERY"
+            ],
+            "discountRate": 39
+        },
+        {
+            "hash": "B4904A2FBACFBA60CBCECA4A7BF0F794",
+            "name": "튤립 사운드북 예쁜 아기 동요",
+            "brand": "|스마트베어|",
+            "sellPrc": 48000,
+            "normalPrc": 53300,
+            "soldOut": false,
+            "imgUrl": "https://static.shop.mmtalk.kr/_data/product/202310/06/32cc8abd8818f7ad183469b4d7f20b2a.jpg",
+            "reviewCount": 0,
+            "reviewAvg": 0,
+            "partnerNo": 211,
+            "tags": [
+                "FREE_DELIVERY"
+            ],
+            "discountRate": 9
+        },
+        {
+            "hash": "0916F1DB3E9E09D43A82EA0A0D88EB8C",
+            "name": "튤립 사운드북 하늘이 세트 (전3권)",
+            "brand": "|스마트베어|",
+            "sellPrc": 141100,
+            "normalPrc": 156700,
+            "soldOut": false,
+            "imgUrl": "https://static.shop.mmtalk.kr/_data/product/202310/06/d6aa5325b0b184a800285c61667508e3.jpg",
+            "reviewCount": 0,
+            "reviewAvg": 0,
+            "partnerNo": 211,
+            "tags": [
+                "FREE_DELIVERY"
+            ],
+            "discountRate": 9
+        },
+        {
+            "hash": "3DAD4A1654FF90A357A83A10660A23D8",
+            "name": "튤립 사운드북 분홍이 세트 (전3권)",
+            "brand": "|스마트베어|",
+            "sellPrc": 135100,
+            "normalPrc": 150100,
+            "soldOut": false,
+            "imgUrl": "https://static.shop.mmtalk.kr/_data/product/202310/06/df0ad48443666b5ecdba527c5fa1c05d.jpg",
+            "reviewCount": 0,
+            "reviewAvg": 0,
+            "partnerNo": 211,
+            "tags": [
+                "FREE_DELIVERY"
+            ],
+            "discountRate": 9
+        },
+        {
+            "hash": "CEF5D42E943133CA564A6EDAD3F5F8C8",
+            "name": "튤립 사운드북 한글 놀이 동요",
+            "brand": "|스마트베어|",
+            "sellPrc": 46800,
+            "normalPrc": 52000,
+            "soldOut": false,
+            "imgUrl": "https://static.shop.mmtalk.kr/_data/product/202310/06/3847402d8d47d1ebe2970e655ad4fcd6.jpg",
+            "reviewCount": 0,
+            "reviewAvg": 0,
+            "partnerNo": 211,
+            "tags": [
+                "FREE_DELIVERY"
+            ],
+            "discountRate": 10
+        }
+    ]
+}

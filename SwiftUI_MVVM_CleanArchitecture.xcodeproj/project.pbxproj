@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		30903B892B089E7A00EB69ED /* SwiftUI_MVVM_CleanArchitectureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903B882B089E7A00EB69ED /* SwiftUI_MVVM_CleanArchitectureApp.swift */; };
-		30903B8B2B089E7A00EB69ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903B8A2B089E7A00EB69ED /* ContentView.swift */; };
 		30903B8D2B089E7C00EB69ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30903B8C2B089E7C00EB69ED /* Assets.xcassets */; };
 		30903B902B089E7C00EB69ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30903B8F2B089E7C00EB69ED /* Preview Assets.xcassets */; };
 		30903B9A2B089E7C00EB69ED /* SwiftUI_MVVM_CleanArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903B992B089E7C00EB69ED /* SwiftUI_MVVM_CleanArchitectureTests.swift */; };
@@ -56,6 +55,11 @@
 		30903C292B08ABAE00EB69ED /* Nexa-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C1F2B08ABAE00EB69ED /* Nexa-Heavy.otf */; };
 		30903C2A2B08ABAE00EB69ED /* Nexa-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 30903C202B08ABAE00EB69ED /* Nexa-Regular.otf */; };
 		30903C2F2B0A383200EB69ED /* BusinessInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C2E2B0A383100EB69ED /* BusinessInfoView.swift */; };
+		30903C342B0A3A2400EB69ED /* LuanchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C332B0A3A2400EB69ED /* LuanchView.swift */; };
+		30903C362B0A44D500EB69ED /* FontCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C352B0A44D500EB69ED /* FontCollection.swift */; };
+		30903C3A2B0A4B5400EB69ED /* ImageCollecteion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C392B0A4B5400EB69ED /* ImageCollecteion.swift */; };
+		30903C3C2B0CDECA00EB69ED /* LuanchViewMoel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C3B2B0CDECA00EB69ED /* LuanchViewMoel.swift */; };
+		30903C3F2B0CDF7600EB69ED /* ViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C3E2B0CDF7600EB69ED /* ViewModelable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +82,6 @@
 /* Begin PBXFileReference section */
 		30903B852B089E7A00EB69ED /* SwiftUI_MVVM_CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_MVVM_CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30903B882B089E7A00EB69ED /* SwiftUI_MVVM_CleanArchitectureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_MVVM_CleanArchitectureApp.swift; sourceTree = "<group>"; };
-		30903B8A2B089E7A00EB69ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		30903B8C2B089E7C00EB69ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30903B8F2B089E7C00EB69ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		30903B952B089E7C00EB69ED /* SwiftUI_MVVM_CleanArchitectureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUI_MVVM_CleanArchitectureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +129,11 @@
 		30903C1F2B08ABAE00EB69ED /* Nexa-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Heavy.otf"; sourceTree = "<group>"; };
 		30903C202B08ABAE00EB69ED /* Nexa-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Regular.otf"; sourceTree = "<group>"; };
 		30903C2E2B0A383100EB69ED /* BusinessInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessInfoView.swift; sourceTree = "<group>"; };
+		30903C332B0A3A2400EB69ED /* LuanchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuanchView.swift; sourceTree = "<group>"; };
+		30903C352B0A44D500EB69ED /* FontCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontCollection.swift; sourceTree = "<group>"; };
+		30903C392B0A4B5400EB69ED /* ImageCollecteion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollecteion.swift; sourceTree = "<group>"; };
+		30903C3B2B0CDECA00EB69ED /* LuanchViewMoel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuanchViewMoel.swift; sourceTree = "<group>"; };
+		30903C3E2B0CDF7600EB69ED /* ViewModelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +228,7 @@
 				30903BB42B089FE100EB69ED /* Assets */,
 				30903C132B08AA9800EB69ED /* Color */,
 				30903C162B08ABAE00EB69ED /* Fonts */,
+				30903C372B0A4B3000EB69ED /* Image */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -366,7 +375,6 @@
 		30903BF12B08A3B300EB69ED /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				30903B8A2B089E7A00EB69ED /* ContentView.swift */,
 				30903B882B089E7A00EB69ED /* SwiftUI_MVVM_CleanArchitectureApp.swift */,
 			);
 			path = Application;
@@ -375,7 +383,9 @@
 		30903BF22B08A3CB00EB69ED /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				30903C3D2B0CDF6B00EB69ED /* Protocol */,
 				30903C0C2B08A9F400EB69ED /* Components */,
+				30903C302B0A39DA00EB69ED /* Luanch */,
 				30903C2B2B0A380500EB69ED /* Main */,
 			);
 			path = Presentation;
@@ -502,6 +512,7 @@
 		30903C162B08ABAE00EB69ED /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				30903C352B0A44D500EB69ED /* FontCollection.swift */,
 				30903C172B08ABAE00EB69ED /* NanumSquare_acR.ttf */,
 				30903C182B08ABAE00EB69ED /* Nexa-ExtraLight.otf */,
 				30903C192B08ABAE00EB69ED /* NanumSquare_acB.ttf */,
@@ -529,6 +540,47 @@
 				30903C2E2B0A383100EB69ED /* BusinessInfoView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		30903C302B0A39DA00EB69ED /* Luanch */ = {
+			isa = PBXGroup;
+			children = (
+				30903C322B0A39F200EB69ED /* ViewModel */,
+				30903C312B0A39EE00EB69ED /* View */,
+			);
+			path = Luanch;
+			sourceTree = "<group>";
+		};
+		30903C312B0A39EE00EB69ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30903C332B0A3A2400EB69ED /* LuanchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30903C322B0A39F200EB69ED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				30903C3B2B0CDECA00EB69ED /* LuanchViewMoel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		30903C372B0A4B3000EB69ED /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				30903C392B0A4B5400EB69ED /* ImageCollecteion.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		30903C3D2B0CDF6B00EB69ED /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				30903C3E2B0CDF7600EB69ED /* ViewModelable.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -681,12 +733,12 @@
 			files = (
 				30903BF92B08A42400EB69ED /* APILoggerPlugin.swift in Sources */,
 				30903C122B08A9F400EB69ED /* BorderPaddingButton.swift in Sources */,
-				30903B8B2B089E7A00EB69ED /* ContentView.swift in Sources */,
 				30903BED2B08A37800EB69ED /* BookSearchRequest.swift in Sources */,
 				30903C2F2B0A383200EB69ED /* BusinessInfoView.swift in Sources */,
 				30903BEE2B08A37800EB69ED /* SearchResult.swift in Sources */,
 				30903C112B08A9F400EB69ED /* ProductImage.swift in Sources */,
 				30903BDD2B08A37300EB69ED /* ReadingModesDTO.swift in Sources */,
+				30903C3A2B0A4B5400EB69ED /* ImageCollecteion.swift in Sources */,
 				30903BFA2B08A42400EB69ED /* NetworkProvider.swift in Sources */,
 				30903BD52B08A37300EB69ED /* KeyChainService.swift in Sources */,
 				30903BEF2B08A37800EB69ED /* GetBookListUsecase.swift in Sources */,
@@ -695,9 +747,12 @@
 				30903BE12B08A37300EB69ED /* AccessInformationDTO.swift in Sources */,
 				30903C152B08AA9800EB69ED /* ColorPalette.swift in Sources */,
 				30903BD92B08A37300EB69ED /* BookInformationDTO.swift in Sources */,
+				30903C342B0A3A2400EB69ED /* LuanchView.swift in Sources */,
 				30903BDE2B08A37300EB69ED /* SearchResultDTO.swift in Sources */,
+				30903C3C2B0CDECA00EB69ED /* LuanchViewMoel.swift in Sources */,
 				30903B892B089E7A00EB69ED /* SwiftUI_MVVM_CleanArchitectureApp.swift in Sources */,
 				30903BDA2B08A37300EB69ED /* SaleInformationDTO.swift in Sources */,
+				30903C362B0A44D500EB69ED /* FontCollection.swift in Sources */,
 				30903BDB2B08A37300EB69ED /* IndustryIdentifiersDTO.swift in Sources */,
 				30903C092B08A45C00EB69ED /* FrameDebugModifier.swift in Sources */,
 				30903BE22B08A37300EB69ED /* DimensionsDTO.swift in Sources */,
@@ -706,6 +761,7 @@
 				30903BDC2B08A37300EB69ED /* ImageLinksDTO.swift in Sources */,
 				30903BD62B08A37300EB69ED /* ImageCacheService.swift in Sources */,
 				30903BE02B08A37300EB69ED /* ProductDTO.swift in Sources */,
+				30903C3F2B0CDF7600EB69ED /* ViewModelable.swift in Sources */,
 				30903BF02B08A37800EB69ED /* GoogleBooksRepository.swift in Sources */,
 				30903BD82B08A37300EB69ED /* GoogleBooksAPI.swift in Sources */,
 				30903C062B08A45C00EB69ED /* Color+Sugar.swift in Sources */,
@@ -799,7 +855,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -856,7 +912,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
