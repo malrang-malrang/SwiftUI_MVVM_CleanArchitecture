@@ -9,5 +9,5 @@ import Combine
 import Moya
 
 protocol GoogleBooksRepository {
-  func getBookList(payload: BookSearchRequest) async throws -> Result<SearchResult, MoyaError>
+  func getBookList(payload: BookSearchRequest) async throws -> SearchResult
 }
