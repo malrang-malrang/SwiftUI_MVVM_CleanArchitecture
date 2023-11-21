@@ -63,6 +63,7 @@
 		30903C432B0CE37B00EB69ED /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C422B0CE37B00EB69ED /* Destination.swift */; };
 		30903C452B0CE44600EB69ED /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C442B0CE44600EB69ED /* Coordinator.swift */; };
 		30903C482B0CE4CF00EB69ED /* AppDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C472B0CE4CF00EB69ED /* AppDestination.swift */; };
+		30903C4A2B0CE50200EB69ED /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C492B0CE50200EB69ED /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +141,7 @@
 		30903C422B0CE37B00EB69ED /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		30903C442B0CE44600EB69ED /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		30903C472B0CE4CF00EB69ED /* AppDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDestination.swift; sourceTree = "<group>"; };
+		30903C492B0CE50200EB69ED /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -611,6 +613,7 @@
 		30903C462B0CE4BA00EB69ED /* AppCoordinator */ = {
 			isa = PBXGroup;
 			children = (
+				30903C492B0CE50200EB69ED /* AppCoordinator.swift */,
 				30903C472B0CE4CF00EB69ED /* AppDestination.swift */,
 			);
 			path = AppCoordinator;
@@ -776,6 +779,7 @@
 				30903C3A2B0A4B5400EB69ED /* ImageCollecteion.swift in Sources */,
 				30903BFA2B08A42400EB69ED /* NetworkProvider.swift in Sources */,
 				30903BD52B08A37300EB69ED /* KeyChainService.swift in Sources */,
+				30903C4A2B0CE50200EB69ED /* AppCoordinator.swift in Sources */,
 				30903BEF2B08A37800EB69ED /* GetBookListUsecase.swift in Sources */,
 				30903C052B08A45C00EB69ED /* Encodable+Sugar.swift in Sources */,
 				30903BD42B08A37300EB69ED /* KeyChainServiceKey.swift in Sources */,
