@@ -62,6 +62,7 @@
 		30903C3F2B0CDF7600EB69ED /* ViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C3E2B0CDF7600EB69ED /* ViewModelable.swift */; };
 		30903C432B0CE37B00EB69ED /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C422B0CE37B00EB69ED /* Destination.swift */; };
 		30903C452B0CE44600EB69ED /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C442B0CE44600EB69ED /* Coordinator.swift */; };
+		30903C482B0CE4CF00EB69ED /* AppDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C472B0CE4CF00EB69ED /* AppDestination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +139,7 @@
 		30903C3E2B0CDF7600EB69ED /* ViewModelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelable.swift; sourceTree = "<group>"; };
 		30903C422B0CE37B00EB69ED /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		30903C442B0CE44600EB69ED /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		30903C472B0CE4CF00EB69ED /* AppDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDestination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -592,6 +594,7 @@
 			isa = PBXGroup;
 			children = (
 				30903C412B0CE26200EB69ED /* Protocol */,
+				30903C462B0CE4BA00EB69ED /* AppCoordinator */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -603,6 +606,14 @@
 				30903C422B0CE37B00EB69ED /* Destination.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		30903C462B0CE4BA00EB69ED /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				30903C472B0CE4CF00EB69ED /* AppDestination.swift */,
+			);
+			path = AppCoordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -787,6 +798,7 @@
 				30903BE02B08A37300EB69ED /* ProductDTO.swift in Sources */,
 				30903C3F2B0CDF7600EB69ED /* ViewModelable.swift in Sources */,
 				30903BF02B08A37800EB69ED /* GoogleBooksRepository.swift in Sources */,
+				30903C482B0CE4CF00EB69ED /* AppDestination.swift in Sources */,
 				30903BD82B08A37300EB69ED /* GoogleBooksAPI.swift in Sources */,
 				30903C062B08A45C00EB69ED /* Color+Sugar.swift in Sources */,
 				30903BD72B08A37300EB69ED /* GoogleBooksRepositoryImpl.swift in Sources */,
