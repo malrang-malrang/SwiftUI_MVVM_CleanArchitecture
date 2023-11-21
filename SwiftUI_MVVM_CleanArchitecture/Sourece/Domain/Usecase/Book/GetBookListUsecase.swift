@@ -9,11 +9,7 @@ import Combine
 import Moya
 
 protocol GetBookListUsecase {
-  func execute(
-    title: String,
-    startIndex: Int,
-    maxResult: Int
-  ) async throws -> Result<SearchResult, MoyaError>
+  func execute(title: String, startIndex: Int, maxResult: Int) async throws -> SearchResult
 }
 
 final class DefaultGetBookListUsecase: GetBookListUsecase {
@@ -23,11 +19,7 @@ final class DefaultGetBookListUsecase: GetBookListUsecase {
     self.googleBooksRepository = googleBooksRepository
   }
 
-  func execute(
-    title: String,
-    startIndex: Int,
-    maxResult: Int
-  ) async throws -> Result<SearchResult, MoyaError> {
+  func execute(title: String, startIndex: Int, maxResult: Int) async throws -> SearchResult {
     let payload = BookSearchRequest(
       title: title,
       startIndex: startIndex,
