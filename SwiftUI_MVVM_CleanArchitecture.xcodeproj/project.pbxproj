@@ -61,6 +61,7 @@
 		30903C3C2B0CDECA00EB69ED /* LuanchViewMoel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C3B2B0CDECA00EB69ED /* LuanchViewMoel.swift */; };
 		30903C3F2B0CDF7600EB69ED /* ViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C3E2B0CDF7600EB69ED /* ViewModelable.swift */; };
 		30903C432B0CE37B00EB69ED /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C422B0CE37B00EB69ED /* Destination.swift */; };
+		30903C452B0CE44600EB69ED /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C442B0CE44600EB69ED /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		30903C3B2B0CDECA00EB69ED /* LuanchViewMoel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuanchViewMoel.swift; sourceTree = "<group>"; };
 		30903C3E2B0CDF7600EB69ED /* ViewModelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelable.swift; sourceTree = "<group>"; };
 		30903C422B0CE37B00EB69ED /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		30903C442B0CE44600EB69ED /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -597,6 +599,7 @@
 		30903C412B0CE26200EB69ED /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				30903C442B0CE44600EB69ED /* Coordinator.swift */,
 				30903C422B0CE37B00EB69ED /* Destination.swift */,
 			);
 			path = Protocol;
@@ -756,6 +759,7 @@
 				30903BED2B08A37800EB69ED /* BookSearchRequest.swift in Sources */,
 				30903C2F2B0A383200EB69ED /* BusinessInfoView.swift in Sources */,
 				30903BEE2B08A37800EB69ED /* SearchResult.swift in Sources */,
+				30903C452B0CE44600EB69ED /* Coordinator.swift in Sources */,
 				30903C112B08A9F400EB69ED /* ProductImage.swift in Sources */,
 				30903BDD2B08A37300EB69ED /* ReadingModesDTO.swift in Sources */,
 				30903C3A2B0A4B5400EB69ED /* ImageCollecteion.swift in Sources */,
