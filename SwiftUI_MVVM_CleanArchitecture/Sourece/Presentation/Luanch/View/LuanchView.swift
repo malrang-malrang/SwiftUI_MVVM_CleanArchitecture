@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct LuanchView: View {
-  @State var isAnimation = false
+  @StateObject var viewModel: LuanchViewMoel
 
   var body: some View {
     self.contentsView()
       .background(ColorPalette.Indigo.indigo1)
-      .onAppear { self.isAnimation = true }
+      .onAppear { self.viewModel.action(.onAppear) }
   }
 
   @ViewBuilder
@@ -23,12 +23,12 @@ struct LuanchView: View {
         ImageCollecteion.Malrang.nukki
           .resizable()
           .aspectRatio(contentMode: .fit)
-          .frame(width: isAnimation ? 100 : 120, height: isAnimation ? 100 : 120)
-          .position(x: (geometry.size.width / 2) - 5, y: geometry.size.height / 3)
-          .animation(
-            .spring(response: 2,dampingFraction: 0.2 ,blendDuration: 40),
-            value: isAnimation
+          .frame(
+            width: self.viewModel.state.isAnimation ? 100 : 120,
+            height: self.viewModel.state.isAnimation ? 100 : 120
           )
+          .position(x: (geometry.size.width / 2) - 5, y: geometry.size.height / 3)
+          .animation(.spring(response: 2), value: self.viewModel.state.isAnimation)
 
         titleView(x: geometry.size.width / 2, y: geometry.size.height / 2.3)
       }
@@ -56,4 +56,4 @@ private enum Constant {
   static var subTitle: String { "당신이 찾는 모든 책" }
 }
 
-#Preview { LuanchView() }
+#Preview { LuanchView(viewModel: LuanchViewMoel()) }

@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUI_MVVM_CleanArchitectureApp: App {
   var body: some Scene {
     WindowGroup {
-      LuanchView()
+      LuanchView(viewModel: LuanchViewMoel())
     }
   }
 }
