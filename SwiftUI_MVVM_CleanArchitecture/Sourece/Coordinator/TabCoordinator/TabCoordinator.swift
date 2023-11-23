@@ -46,4 +46,9 @@ extension TabCoordinator {
     let viewModel = LuanchViewMoel()
     LuanchView(viewModel: viewModel)
   }
+
+  @ViewBuilder
+  func categoryView() -> some View {
+    CategoryView()
+  }
 }

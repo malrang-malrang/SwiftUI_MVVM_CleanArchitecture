@@ -15,4 +15,16 @@ enum ImageCollecteion {
   enum Butter {
     static var nukki = Image("ButterNukki")
   }
+
+  enum Notice {
+    static var bell = Image(systemName: "bell")
+  }
+
+  enum Setting {
+    static var gear = Image(systemName: "gearshape")
+  }
+
+  enum Category {
+    static var tab = Image(systemName: "list.bullet")
+  }
 }

@@ -15,7 +15,7 @@ struct TabContainerView: View {
       ZStack {
         self.coordinator.navigationLinkSection().zIndex(0)
 
-        self.coordinator.luanchScreen().zIndex(2)
+//        self.coordinator.luanchScreen().zIndex(2)
 
         self.tabView().zIndex(1)
       }
@@ -23,7 +23,13 @@ struct TabContainerView: View {
   }
 
   private func tabView() -> some View {
-    Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    TabView(selection: $coordinator.destination) {
+
+      self.coordinator.categoryView()
+        .tabItem { TabDestination.category.tabBarItem }
+        .tag(TabDestination.category)
+
+    }
   }
 }
 
