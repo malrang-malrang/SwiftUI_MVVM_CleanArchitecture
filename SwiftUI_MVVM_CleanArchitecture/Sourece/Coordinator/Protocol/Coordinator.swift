@@ -41,7 +41,6 @@ extension Coordinator {
   func push(destination: ViewPath) {
     self.destination = destination
     self.navigationTrigger.toggle()
-    print(self.destination, self.navigationTrigger)
   }
 
   func getTrigger() -> Bool {

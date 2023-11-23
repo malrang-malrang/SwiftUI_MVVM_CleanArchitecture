@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct SwiftUI_MVVM_CleanArchitectureApp: App {
-  private let appCoordinator = AppCoordinator(isRoot: true)
+  private let appCoordinator = AppCoordinator(destination: .tab(.home), isRoot: true)
 
   var body: some Scene {
     WindowGroup {

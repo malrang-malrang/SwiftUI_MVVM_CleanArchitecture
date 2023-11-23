@@ -16,7 +16,7 @@ final class AppCoordinator: Coordinator {
 
   @Published var navigationTrigger = false
 
-  init(destination: AppDestination = .luanch, isRoot: Bool = false) {
+  init(destination: AppDestination = .tab(.home), isRoot: Bool = false) {
     self.destination = destination
     self.isRoot = isRoot
 
@@ -32,11 +32,8 @@ final class AppCoordinator: Coordinator {
   @ViewBuilder
   func composeView() -> some View {
     switch self.destination {
-    case .luanch:
-      let viewModel = LuanchViewMoel()
-      LuanchView(viewModel: viewModel)
-    case .main(let destination):
-      let coordinator = MainCoordinator(parent: self, destination: destination, isRoot: true)
+    case .tab(let tabDestination):
+      let coordinator = TabCoordinator(parent: self, destination: tabDestination, isRoot: true)
       coordinator.composeView()
     }
   }

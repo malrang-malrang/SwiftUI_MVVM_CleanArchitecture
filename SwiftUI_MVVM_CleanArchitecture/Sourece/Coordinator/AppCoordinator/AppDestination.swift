@@ -8,6 +8,5 @@
 import Foundation
 
 enum AppDestination: Destination {
-  case luanch
-  case main(MainDestination)
+  case tab(TabDestination)
 }

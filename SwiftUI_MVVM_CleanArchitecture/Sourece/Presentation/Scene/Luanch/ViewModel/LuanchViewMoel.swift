@@ -9,19 +9,25 @@ import Foundation
 
 final class LuanchViewMoel: ViewModelable {
   enum Action {
-    case onAppear
+    case onLuanchScreen
   }
 
   struct State {
-    var isAnimation = false
+    var isAnimation = true
   }
 
   @Published var state = State()
 
   func action(_ action: Action) {
     switch action {
-    case .onAppear:
-      self.state.isAnimation = true
+    case .onLuanchScreen:
+      self.luanchAnimation()
     }
+  }
+
+  private func luanchAnimation() {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+      self.state.isAnimation.toggle()
+    })
   }
 }

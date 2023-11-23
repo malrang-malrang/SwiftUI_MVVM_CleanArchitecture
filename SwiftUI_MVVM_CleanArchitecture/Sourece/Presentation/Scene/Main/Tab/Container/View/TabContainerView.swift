@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct TabContainerView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  @EnvironmentObject var coordinator: TabCoordinator
+  @StateObject var viewModel: LuanchViewMoel
+
+  var body: some View {
+    NavigationView {
+      ZStack {
+        self.coordinator.navigationLinkSection()
+
+        self.tabView()
+      }
     }
+  }
+
+  private func tabView() -> some View {
+    Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  }
 }
 
-#Preview {
-    TabContainerView()
-}
+#Preview { TabContainerView(viewModel: LuanchViewMoel()) }

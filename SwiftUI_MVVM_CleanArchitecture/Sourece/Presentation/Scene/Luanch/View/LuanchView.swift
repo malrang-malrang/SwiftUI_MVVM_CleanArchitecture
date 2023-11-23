@@ -11,9 +11,11 @@ struct LuanchView: View {
   @StateObject var viewModel: LuanchViewMoel
 
   var body: some View {
-    self.contentsView()
-      .background(ColorPalette.Indigo.indigo1)
-      .onAppear { self.viewModel.action(.onAppear) }
+    NavigationView {
+      self.contentsView()
+        .background(ColorPalette.Indigo.indigo1)
+        .onAppear { self.viewModel.action(.onLuanchScreen) }
+    }
   }
 
   @ViewBuilder
