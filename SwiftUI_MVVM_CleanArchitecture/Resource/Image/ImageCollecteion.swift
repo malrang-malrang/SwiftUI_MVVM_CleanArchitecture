@@ -24,7 +24,11 @@ enum ImageCollecteion {
     static var gear = Image(systemName: "gearshape")
   }
 
-  enum Category {
-    static var tab = Image(systemName: "list.bullet")
+  enum TabBar {
+    static var category = Image(systemName: "list.bullet")
+    static var bookMark = Image(systemName: "star")
+    static var home = Image(systemName: "house")
+    static var shoppingBasket = Image(systemName: "cart")
+    static var myProfile = Image(systemName: "person")
   }
 }

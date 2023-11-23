@@ -32,11 +32,15 @@ extension TabDestination {
     switch self {
     case .category:
       VStack {
-        ImageCollecteion.Category.tab
+        ImageCollecteion.TabBar.category
         Text(self.title)
       }
     case .bookmark:
-      EmptyView()
+      VStack {
+        ImageCollecteion.TabBar.bookMark
+          .environment(\.symbolVariants, .none)
+        Text(self.title)
+      }
     case .home:
       EmptyView()
     case .shoppingBasket:

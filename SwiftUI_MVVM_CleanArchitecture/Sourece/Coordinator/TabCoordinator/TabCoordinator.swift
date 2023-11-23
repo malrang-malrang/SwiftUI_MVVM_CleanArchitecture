@@ -51,4 +51,9 @@ extension TabCoordinator {
   func categoryView() -> some View {
     CategoryView()
   }
+
+  @ViewBuilder
+  func bookmarkView() -> some View {
+    BookMarkView()
+  }
 }
