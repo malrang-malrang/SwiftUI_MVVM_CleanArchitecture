@@ -10,7 +10,7 @@ import Combine
 
 final class AppCoordinator: Coordinator {
   private(set) var popToRootViewTriggerName = Notification.Name(rawValue: "PopToAppRoot")
-  private unowned var dependencyContainer: DependencyContainer
+  private weak var dependencyContainer: DependencyContainer?
   var cancellable: Set<AnyCancellable> = []
   var isRoot: Bool
   var destination: AppDestination

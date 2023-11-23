@@ -10,8 +10,8 @@ import Combine
 
 final class TabCoordinator: Coordinator {
   private(set) var popToRootViewTriggerName = Notification.Name(rawValue: "PopToTabRoot")
-  private unowned var dependencyContainer: DependencyContainer
-  private unowned var parent: AppCoordinator
+  private weak var dependencyContainer: DependencyContainer?
+  private weak var parent: AppCoordinator?
   var cancellable: Set<AnyCancellable> = []
   var isRoot: Bool
 
@@ -19,7 +19,7 @@ final class TabCoordinator: Coordinator {
   @Published var navigationTrigger = false
 
   init(
-    dependencyContainer: DependencyContainer,
+    dependencyContainer: DependencyContainer?,
     parent: AppCoordinator,
     destination: TabDestination,
     isRoot: Bool = true
@@ -37,5 +37,13 @@ final class TabCoordinator: Coordinator {
     TabContainerView()
       .environmentObject(self)
       .navigationBarHidden(true)
+  }
+}
+
+extension TabCoordinator {
+  @ViewBuilder
+  func luanchScreen() -> some View {
+    let viewModel = LuanchViewMoel()
+    LuanchView(viewModel: viewModel)
   }
 }

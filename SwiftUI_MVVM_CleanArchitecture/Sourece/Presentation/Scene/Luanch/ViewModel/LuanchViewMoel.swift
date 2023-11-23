@@ -14,6 +14,7 @@ final class LuanchViewMoel: ViewModelable {
 
   struct State {
     var isAnimation = true
+    var taskCompleted = false
   }
 
   @Published var state = State()
@@ -28,6 +29,7 @@ final class LuanchViewMoel: ViewModelable {
   private func luanchAnimation() {
     DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
       self.state.isAnimation.toggle()
+      self.state.taskCompleted.toggle()
     })
   }
 }

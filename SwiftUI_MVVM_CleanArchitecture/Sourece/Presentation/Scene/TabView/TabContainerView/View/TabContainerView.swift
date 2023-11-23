@@ -13,9 +13,11 @@ struct TabContainerView: View {
   var body: some View {
     NavigationView {
       ZStack {
-        self.coordinator.navigationLinkSection()
+        self.coordinator.navigationLinkSection().zIndex(0)
 
-        self.tabView()
+        self.coordinator.luanchScreen().zIndex(2)
+
+        self.tabView().zIndex(1)
       }
     }
   }
