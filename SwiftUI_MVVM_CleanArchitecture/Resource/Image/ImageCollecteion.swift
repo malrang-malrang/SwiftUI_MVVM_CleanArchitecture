@@ -24,6 +24,14 @@ enum ImageCollecteion {
     static var gear = Image(systemName: "gearshape")
   }
 
+  enum Search {
+    static var `default` = Image(systemName: "magnifyingglass")
+  }
+
+  enum Box {
+    static var `default` = Image(systemName: "shippingbox")
+  }
+
   enum TabBar {
     static var category = Image(systemName: "list.bullet")
     static var bookMark = Image(systemName: "star")

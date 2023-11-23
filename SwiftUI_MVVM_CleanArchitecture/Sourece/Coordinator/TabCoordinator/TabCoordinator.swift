@@ -56,4 +56,9 @@ extension TabCoordinator {
   func bookmarkView() -> some View {
     BookMarkView()
   }
+
+  @ViewBuilder
+  func homeView() -> some View {
+    HomeView()
+  }
 }

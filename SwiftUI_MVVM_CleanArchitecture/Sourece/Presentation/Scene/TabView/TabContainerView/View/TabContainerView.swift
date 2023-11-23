@@ -32,7 +32,10 @@ struct TabContainerView: View {
       self.coordinator.bookmarkView()
         .tabItem { TabDestination.bookmark.tabBarItem }
         .tag(TabDestination.bookmark)
-
+      
+      self.coordinator.homeView()
+        .tabItem { TabDestination.home.tabBarItem }
+        .tag(TabDestination.home)
     }
   }
 }

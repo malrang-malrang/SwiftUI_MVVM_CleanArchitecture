@@ -42,11 +42,23 @@ extension TabDestination {
         Text(self.title)
       }
     case .home:
-      EmptyView()
+      VStack {
+        ImageCollecteion.TabBar.home
+          .environment(\.symbolVariants, .none)
+        Text(self.title)
+      }
     case .shoppingBasket:
-      EmptyView()
+      VStack {
+        ImageCollecteion.TabBar.shoppingBasket
+          .environment(\.symbolVariants, .none)
+        Text(self.title)
+      }
     case .myProfile:
-      EmptyView()
+      VStack {
+        ImageCollecteion.TabBar.myProfile
+          .environment(\.symbolVariants, .none)
+        Text(self.title)
+      }
     }
   }
 }
