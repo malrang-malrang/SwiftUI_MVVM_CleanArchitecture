@@ -67,6 +67,8 @@
 		30903C562B0CF04D00EB69ED /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C552B0CF04D00EB69ED /* AppCoordinator.swift */; };
 		30903C5A2B0CF4DA00EB69ED /* TabDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C592B0CF4DA00EB69ED /* TabDestination.swift */; };
 		30903C5C2B0CF56F00EB69ED /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C5B2B0CF56F00EB69ED /* TabCoordinator.swift */; };
+		30A0D3B42B0F8487004FE560 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0D3B32B0F8487004FE560 /* DependencyContainer.swift */; };
+		30A0D3B72B0F857A004FE560 /* DefaultDefendencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0D3B62B0F857A004FE560 /* DefaultDefendencyContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +150,8 @@
 		30903C552B0CF04D00EB69ED /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		30903C592B0CF4DA00EB69ED /* TabDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDestination.swift; sourceTree = "<group>"; };
 		30903C5B2B0CF56F00EB69ED /* TabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
+		30A0D3B32B0F8487004FE560 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		30A0D3B62B0F857A004FE560 /* DefaultDefendencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDefendencyContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,8 +230,8 @@
 		30903BB22B089E8600EB69ED /* Sourece */ = {
 			isa = PBXGroup;
 			children = (
-				30903C402B0CE25300EB69ED /* Coordinator */,
 				30903BF12B08A3B300EB69ED /* Application */,
+				30903C402B0CE25300EB69ED /* Coordinator */,
 				30903BF22B08A3CB00EB69ED /* Presentation */,
 				30903BE42B08A37800EB69ED /* Domain */,
 				30903BBB2B08A37300EB69ED /* Data */,
@@ -390,6 +394,7 @@
 		30903BF12B08A3B300EB69ED /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				30A0D3B52B0F84FC004FE560 /* DependencyContainer */,
 				30903B882B089E7A00EB69ED /* SwiftUI_MVVM_CleanArchitectureApp.swift */,
 			);
 			path = Application;
@@ -541,14 +546,6 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		30903C2B2B0A380500EB69ED /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				30903C502B0CEE3000EB69ED /* Tab */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		30903C2D2B0A382200EB69ED /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -630,25 +627,25 @@
 			isa = PBXGroup;
 			children = (
 				30903C302B0A39DA00EB69ED /* Luanch */,
-				30903C2B2B0A380500EB69ED /* Main */,
+				30903C502B0CEE3000EB69ED /* TabView */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
 		};
-		30903C502B0CEE3000EB69ED /* Tab */ = {
+		30903C502B0CEE3000EB69ED /* TabView */ = {
 			isa = PBXGroup;
 			children = (
-				30903C512B0CEEF700EB69ED /* Container */,
+				30903C512B0CEEF700EB69ED /* TabContainerView */,
 			);
-			path = Tab;
+			path = TabView;
 			sourceTree = "<group>";
 		};
-		30903C512B0CEEF700EB69ED /* Container */ = {
+		30903C512B0CEEF700EB69ED /* TabContainerView */ = {
 			isa = PBXGroup;
 			children = (
 				30903C522B0CEF0400EB69ED /* View */,
 			);
-			path = Container;
+			path = TabContainerView;
 			sourceTree = "<group>";
 		};
 		30903C522B0CEF0400EB69ED /* View */ = {
@@ -666,6 +663,15 @@
 				30903C592B0CF4DA00EB69ED /* TabDestination.swift */,
 			);
 			path = TabCoordinator;
+			sourceTree = "<group>";
+		};
+		30A0D3B52B0F84FC004FE560 /* DependencyContainer */ = {
+			isa = PBXGroup;
+			children = (
+				30A0D3B32B0F8487004FE560 /* DependencyContainer.swift */,
+				30A0D3B62B0F857A004FE560 /* DefaultDefendencyContainer.swift */,
+			);
+			path = DependencyContainer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -829,6 +835,7 @@
 				30903C5C2B0CF56F00EB69ED /* TabCoordinator.swift in Sources */,
 				30903BDD2B08A37300EB69ED /* ReadingModesDTO.swift in Sources */,
 				30903C3A2B0A4B5400EB69ED /* ImageCollecteion.swift in Sources */,
+				30A0D3B72B0F857A004FE560 /* DefaultDefendencyContainer.swift in Sources */,
 				30903BFA2B08A42400EB69ED /* NetworkProvider.swift in Sources */,
 				30903BD52B08A37300EB69ED /* KeyChainService.swift in Sources */,
 				30903BEF2B08A37800EB69ED /* GetBookListUsecase.swift in Sources */,
@@ -854,6 +861,7 @@
 				30903BE02B08A37300EB69ED /* ProductDTO.swift in Sources */,
 				30903C3F2B0CDF7600EB69ED /* ViewModelable.swift in Sources */,
 				30903BF02B08A37800EB69ED /* GoogleBooksRepository.swift in Sources */,
+				30A0D3B42B0F8487004FE560 /* DependencyContainer.swift in Sources */,
 				30903C4D2B0CED1800EB69ED /* AppDestination.swift in Sources */,
 				30903BD82B08A37300EB69ED /* GoogleBooksAPI.swift in Sources */,
 				30903C062B08A45C00EB69ED /* Color+Sugar.swift in Sources */,

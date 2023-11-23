@@ -13,8 +13,9 @@ protocol Coordinator: ObservableObject {
   associatedtype ViewPath: Destination
 
   var popToRootViewTriggerName: Notification.Name { get }
-  var destination: ViewPath { get set }
   var isRoot: Bool { get }
+  var destination: ViewPath { get set }
+  var cancellable: Set<AnyCancellable> { get set }
 
   var navigationTrigger: Bool { get set }
 
@@ -22,6 +23,16 @@ protocol Coordinator: ObservableObject {
 }
 
 extension Coordinator {
+  func subscribeIsRoot() {
+    if self.isRoot {
+      NotificationCenter.default.publisher(for: self.popToRootViewTriggerName)
+        .sink { [unowned self] _ in
+          self.navigationTrigger = false
+        }
+        .store(in: &cancellable)
+    }
+  }
+
   @ViewBuilder
   func navigationLinkSection() -> some View {
     NavigationLink(isActive: Binding<Bool>(
@@ -43,11 +54,11 @@ extension Coordinator {
     self.navigationTrigger.toggle()
   }
 
-  func getTrigger() -> Bool {
+  private func getTrigger() -> Bool {
     self.navigationTrigger
   }
 
-  func setTrigger(newValue: Bool) {
+  private func setTrigger(newValue: Bool) {
     self.navigationTrigger = newValue
   }
 }

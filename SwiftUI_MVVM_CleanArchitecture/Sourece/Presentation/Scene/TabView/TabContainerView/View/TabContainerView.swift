@@ -9,7 +9,6 @@ import SwiftUI
 
 struct TabContainerView: View {
   @EnvironmentObject var coordinator: TabCoordinator
-  @StateObject var viewModel: LuanchViewMoel
 
   var body: some View {
     NavigationView {
@@ -26,4 +25,4 @@ struct TabContainerView: View {
   }
 }
 
-#Preview { TabContainerView(viewModel: LuanchViewMoel()) }
+#Preview { TabContainerView() }

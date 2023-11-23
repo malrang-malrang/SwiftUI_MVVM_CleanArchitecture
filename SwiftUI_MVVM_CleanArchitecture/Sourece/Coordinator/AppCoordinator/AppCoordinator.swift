@@ -10,30 +10,34 @@ import Combine
 
 final class AppCoordinator: Coordinator {
   private(set) var popToRootViewTriggerName = Notification.Name(rawValue: "PopToAppRoot")
-  private var cancellable: Set<AnyCancellable> = []
-  var destination: AppDestination
+  private unowned var dependencyContainer: DependencyContainer
+  var cancellable: Set<AnyCancellable> = []
   var isRoot: Bool
+  var destination: AppDestination
 
   @Published var navigationTrigger = false
 
-  init(destination: AppDestination = .tab(.home), isRoot: Bool = false) {
+  init(
+    dependencyContainer: DependencyContainer,
+    destination: AppDestination = .tab(.home),
+    isRoot: Bool = true
+  ) {
+    self.dependencyContainer = dependencyContainer
     self.destination = destination
     self.isRoot = isRoot
 
-    if isRoot {
-      NotificationCenter.default.publisher(for: self.popToRootViewTriggerName)
-        .sink { [unowned self] _ in
-          self.navigationTrigger = false
-        }
-        .store(in: &cancellable)
-    }
+    self.subscribeIsRoot()
   }
 
   @ViewBuilder
   func composeView() -> some View {
     switch self.destination {
     case .tab(let tabDestination):
-      let coordinator = TabCoordinator(parent: self, destination: tabDestination, isRoot: true)
+      let coordinator = TabCoordinator(
+        dependencyContainer: self.dependencyContainer,
+        parent: self,
+        destination: tabDestination
+      )
       coordinator.composeView()
     }
   }
