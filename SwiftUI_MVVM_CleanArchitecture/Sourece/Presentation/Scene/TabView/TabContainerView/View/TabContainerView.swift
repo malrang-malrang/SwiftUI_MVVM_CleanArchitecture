@@ -36,6 +36,10 @@ struct TabContainerView: View {
       self.coordinator.homeView()
         .tabItem { TabDestination.home.tabBarItem }
         .tag(TabDestination.home)
+
+      self.coordinator.shoppingBasketView()
+        .tabItem { TabDestination.shoppingBasket.tabBarItem }
+        .tag(TabDestination.shoppingBasket)
     }
   }
 }
