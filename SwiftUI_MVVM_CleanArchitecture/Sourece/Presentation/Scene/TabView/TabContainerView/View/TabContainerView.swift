@@ -40,6 +40,10 @@ struct TabContainerView: View {
       self.coordinator.shoppingBasketView()
         .tabItem { TabDestination.shoppingBasket.tabBarItem }
         .tag(TabDestination.shoppingBasket)
+
+      self.coordinator.myProfileView()
+        .tabItem { TabDestination.myProfile.tabBarItem }
+        .tag(TabDestination.myProfile)
     }
   }
 }

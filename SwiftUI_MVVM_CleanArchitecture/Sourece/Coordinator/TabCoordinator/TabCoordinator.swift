@@ -66,4 +66,9 @@ extension TabCoordinator {
   func shoppingBasketView() -> some View {
     ShoppingBasketView()
   }
+
+  @ViewBuilder
+  func myProfileView() -> some View {
+    MyProfileView()
+  }
 }
