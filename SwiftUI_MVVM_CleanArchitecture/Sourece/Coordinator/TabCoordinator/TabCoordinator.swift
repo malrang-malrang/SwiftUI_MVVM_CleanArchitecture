@@ -57,8 +57,13 @@ extension TabCoordinator {
         MyProfileView()
       }
     }
-    .tabItem { destination.tabBarItem }
+    .tabItem {
+      destination.tabBarItem
+        .environment(
+          \.symbolVariants,
+           destination == self.destination ? .fill : .none
+        )
+    }
     .tag(destination)
-    .environment(\.symbolVariants, destination == self.destination ? .fill : .none)
   }
 }
