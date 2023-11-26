@@ -54,7 +54,7 @@ struct LuanchView: View {
 }
 
 private enum Constant {
-  static var title: String { "새벽책방" }
+  static var title: String { "새벽서점" }
   static var subTitle: String { "당신이 찾는 모든 책" }
 }
 

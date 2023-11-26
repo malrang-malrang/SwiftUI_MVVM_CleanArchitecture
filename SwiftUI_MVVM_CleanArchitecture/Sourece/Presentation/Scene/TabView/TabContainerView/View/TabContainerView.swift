@@ -7,8 +7,40 @@
 
 import SwiftUI
 
+final class TabContainerViewModel: ViewModelable {
+  enum Action {
+
+  }
+
+  struct State {
+    var luanchTaskCompleted = false
+  }
+
+  @Published var state = State()
+
+  func action(_ action: Action) {
+//    switch action {
+//    case .onLuanchScreen:
+//      self.luanchAnimation()
+//    }
+  }
+}
+
 struct TabContainerView: View {
   @EnvironmentObject var coordinator: TabCoordinator
+
+  init() {
+    let tabBarAppearance = UITabBar.appearance()
+    tabBarAppearance.backgroundColor = UIColor(.white)
+    tabBarAppearance.shadowImage = UIImage()
+
+    let navigationBarAppearance = UINavigationBarAppearance()
+    navigationBarAppearance.backgroundColor = UIColor(.white)
+    navigationBarAppearance.shadowColor = .clear
+    UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+    UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+    UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+  }
 
   var body: some View {
     NavigationView {
@@ -25,26 +57,13 @@ struct TabContainerView: View {
   private func tabView() -> some View {
     TabView(selection: $coordinator.destination) {
 
-      self.coordinator.categoryView()
-        .tabItem { TabDestination.category.tabBarItem }
-        .tag(TabDestination.category)
-
-      self.coordinator.bookmarkView()
-        .tabItem { TabDestination.bookmark.tabBarItem }
-        .tag(TabDestination.bookmark)
-      
-      self.coordinator.homeView()
-        .tabItem { TabDestination.home.tabBarItem }
-        .tag(TabDestination.home)
-
-      self.coordinator.shoppingBasketView()
-        .tabItem { TabDestination.shoppingBasket.tabBarItem }
-        .tag(TabDestination.shoppingBasket)
-
-      self.coordinator.myProfileView()
-        .tabItem { TabDestination.myProfile.tabBarItem }
-        .tag(TabDestination.myProfile)
+      self.coordinator.tabView(destination: .category)
+      self.coordinator.tabView(destination: .bookmark)
+      self.coordinator.tabView(destination: .home)
+      self.coordinator.tabView(destination: .shoppingBasket)
+      self.coordinator.tabView(destination: .myProfile)
     }
+    .accentColor(ColorPalette.Indigo.indigo2)
   }
 }
 

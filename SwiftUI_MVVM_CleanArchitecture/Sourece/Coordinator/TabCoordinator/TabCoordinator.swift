@@ -42,33 +42,23 @@ final class TabCoordinator: Coordinator {
 
 extension TabCoordinator {
   @ViewBuilder
-  func luanchScreen() -> some View {
-    let viewModel = LuanchViewMoel()
-    LuanchView(viewModel: viewModel)
-  }
-
-  @ViewBuilder
-  func categoryView() -> some View {
-    CategoryView()
-  }
-
-  @ViewBuilder
-  func bookmarkView() -> some View {
-    BookMarkView()
-  }
-
-  @ViewBuilder
-  func homeView() -> some View {
-    HomeView()
-  }
-
-  @ViewBuilder
-  func shoppingBasketView() -> some View {
-    ShoppingBasketView()
-  }
-
-  @ViewBuilder
-  func myProfileView() -> some View {
-    MyProfileView()
+  func tabView(destination: TabDestination) -> some View {
+    VStack {
+      switch destination {
+      case .category:
+        CategoryView()
+      case .bookmark:
+        BookMarkView()
+      case .home:
+        HomeView()
+      case .shoppingBasket:
+        ShoppingBasketView()
+      case .myProfile:
+        MyProfileView()
+      }
+    }
+    .tabItem { destination.tabBarItem }
+    .tag(destination)
+    .environment(\.symbolVariants, destination == self.destination ? .fill : .none)
   }
 }

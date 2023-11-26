@@ -38,25 +38,25 @@ extension TabDestination {
     case .bookmark:
       VStack {
         ImageCollecteion.TabBar.bookMark
-          .environment(\.symbolVariants, .none)
+//          .environment(\.symbolVariants, .none)
         Text(self.title)
       }
     case .home:
       VStack {
         ImageCollecteion.TabBar.home
-          .environment(\.symbolVariants, .none)
+//          .environment(\.symbolVariants, .none)
         Text(self.title)
       }
     case .shoppingBasket:
       VStack {
         ImageCollecteion.TabBar.shoppingBasket
-          .environment(\.symbolVariants, .none)
+//          .environment(\.symbolVariants, .none)
         Text(self.title)
       }
     case .myProfile:
       VStack {
         ImageCollecteion.TabBar.myProfile
-          .environment(\.symbolVariants, .none)
+//          .environment(\.symbolVariants, .none)
         Text(self.title)
       }
     }

@@ -61,7 +61,7 @@ fileprivate extension HomeView {
 }
 
 private enum Constant {
-  static var appName: String { "새벽책방" }
+  static var appName: String { "새벽서점" }
 }
 
 #Preview { HomeView() }
