@@ -7,56 +7,37 @@
 
 import SwiftUI
 
-final class TabContainerViewModel: ViewModelable {
-  enum Action {
-
-  }
-
-  struct State {
-    var luanchTaskCompleted = false
-  }
-
-  @Published var state = State()
-
-  func action(_ action: Action) {
-//    switch action {
-//    case .onLuanchScreen:
-//      self.luanchAnimation()
-//    }
-  }
-}
-
 struct TabContainerView: View {
   @EnvironmentObject var coordinator: TabCoordinator
+  @ObservedObject var viewModel: TabContainerViewModel
 
-  init() {
-    let tabBarAppearance = UITabBar.appearance()
-    tabBarAppearance.backgroundColor = UIColor(.white)
-    tabBarAppearance.shadowImage = UIImage()
+  init(viewModel: TabContainerViewModel) {
+    self.viewModel = viewModel
 
-    let navigationBarAppearance = UINavigationBarAppearance()
-    navigationBarAppearance.backgroundColor = UIColor(.white)
-    navigationBarAppearance.shadowColor = .clear
-    UINavigationBar.appearance().standardAppearance = navigationBarAppearance
-    UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
-    UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+    self.setTabBarAppearence()
+    self.setNavigationBarAppearence()
   }
 
   var body: some View {
     NavigationView {
       ZStack {
-        self.coordinator.navigationLinkSection().zIndex(0)
-
-//        self.coordinator.luanchScreen().zIndex(2)
+        if !self.viewModel.state.luanchTaskCompleted {
+          self.coordinator.luanchScreen(
+            isTaskCompleted: self.$viewModel.state.luanchTaskCompleted
+          )
+          .zIndex(2)
+          .transition(.opacity.animation(.easeIn))
+        }
 
         self.tabView().zIndex(1)
+
+        self.coordinator.navigationLinkSection().zIndex(0)
       }
     }
   }
 
   private func tabView() -> some View {
     TabView(selection: $coordinator.destination) {
-
       self.coordinator.tabView(destination: .category)
       self.coordinator.tabView(destination: .bookmark)
       self.coordinator.tabView(destination: .home)
@@ -67,4 +48,21 @@ struct TabContainerView: View {
   }
 }
 
-#Preview { TabContainerView() }
+fileprivate extension TabContainerView {
+  private func setTabBarAppearence() {
+    let tabBarAppearance = UITabBar.appearance()
+    tabBarAppearance.backgroundColor = UIColor(.white)
+    tabBarAppearance.shadowImage = UIImage()
+  }
+
+  private func setNavigationBarAppearence() {
+    let navigationBarAppearance = UINavigationBarAppearance()
+    navigationBarAppearance.backgroundColor = UIColor(.white)
+    navigationBarAppearance.shadowColor = .clear
+    UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+    UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+    UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+  }
+}
+
+#Preview { TabContainerView(viewModel: TabContainerViewModel()) }

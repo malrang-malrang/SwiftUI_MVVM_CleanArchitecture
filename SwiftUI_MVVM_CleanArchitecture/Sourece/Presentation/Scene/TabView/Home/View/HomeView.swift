@@ -21,7 +21,6 @@ struct HomeView: View {
     GeometryReader { proxy in
       ScrollView {
         VStack {
-          Text("Home")
           BusinessInfoView()
             .padding(.horizontal, 10)
         }

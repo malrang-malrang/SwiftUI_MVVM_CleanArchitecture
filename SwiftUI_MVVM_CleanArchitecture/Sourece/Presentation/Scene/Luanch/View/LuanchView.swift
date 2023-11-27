@@ -26,11 +26,14 @@ struct LuanchView: View {
           .resizable()
           .aspectRatio(contentMode: .fit)
           .frame(
-            width: self.viewModel.state.isAnimation ? 100 : 120,
-            height: self.viewModel.state.isAnimation ? 100 : 120
+            width: self.viewModel.state.isAnimation ? 120 : 150,
+            height: self.viewModel.state.isAnimation ? 120 : 150
           )
           .position(x: (geometry.size.width / 2) - 5, y: geometry.size.height / 3)
-          .animation(.spring(response: 2), value: self.viewModel.state.isAnimation)
+          .animation(
+            .spring(duration: 1.5, bounce: 0.7),
+            value: self.viewModel.state.isAnimation
+          )
 
         titleView(x: geometry.size.width / 2, y: geometry.size.height / 2.3)
       }
@@ -58,4 +61,5 @@ private enum Constant {
   static var subTitle: String { "당신이 찾는 모든 책" }
 }
 
-#Preview { LuanchView(viewModel: LuanchViewMoel()) }
+#Preview { LuanchView(viewModel: LuanchViewMoel(isTaskCompleted: Binding<Bool>.constant(false)))
+}

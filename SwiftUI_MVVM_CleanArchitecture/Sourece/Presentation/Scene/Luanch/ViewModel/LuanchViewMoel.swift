@@ -5,7 +5,7 @@
 //  Created by 김동욱 on 11/21/23.
 //
 
-import Foundation
+import SwiftUI
 
 final class LuanchViewMoel: ViewModelable {
   enum Action {
@@ -13,11 +13,15 @@ final class LuanchViewMoel: ViewModelable {
   }
 
   struct State {
-    var isAnimation = true
-    var taskCompleted = false
+    var isAnimation = false
+    @Binding var taskCompleted: Bool
   }
 
-  @Published var state = State()
+  @Published var state: State
+
+  init(isTaskCompleted: Binding<Bool>) {
+    self.state = State(taskCompleted: isTaskCompleted)
+  }
 
   func action(_ action: Action) {
     switch action {
@@ -27,10 +31,11 @@ final class LuanchViewMoel: ViewModelable {
   }
 
   private func luanchAnimation() {
+    self.state.isAnimation.toggle()
+    
     DispatchQueue.main.asyncAfter(
-      deadline: .now() + 2,
+      deadline: .now() + 4,
       execute: {
-        self.state.isAnimation.toggle()
         self.state.taskCompleted.toggle()
       }
     )
