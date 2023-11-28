@@ -94,11 +94,13 @@ struct BusinessInfoView: View {
         title: Constant.contactByPhone,
         action: {}
       )
+      .environment(\.symbolVariants, .none)
       BorderPaddingButton(
         systemName: "bubble.left",
         title: Constant.contactingUsViaChat,
         action: {}
       )
+      .environment(\.symbolVariants, .none)
     }
   }
 

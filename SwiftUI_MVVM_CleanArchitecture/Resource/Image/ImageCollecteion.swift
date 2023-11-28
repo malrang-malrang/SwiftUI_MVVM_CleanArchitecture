@@ -15,4 +15,28 @@ enum ImageCollecteion {
   enum Butter {
     static var nukki = Image("ButterNukki")
   }
+
+  enum Notice {
+    static var bell = Image(systemName: "bell")
+  }
+
+  enum Setting {
+    static var gear = Image(systemName: "gearshape")
+  }
+
+  enum Search {
+    static var `default` = Image(systemName: "magnifyingglass")
+  }
+
+  enum Box {
+    static var `default` = Image(systemName: "shippingbox")
+  }
+
+  enum TabBar {
+    static var category = Image(systemName: "list.bullet")
+    static var bookMark = Image(systemName: "star")
+    static var home = Image(systemName: "house")
+    static var shoppingBasket = Image(systemName: "cart")
+    static var myProfile = Image(systemName: "person")
+  }
 }

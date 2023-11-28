@@ -26,13 +26,24 @@ struct LuanchView: View {
           .resizable()
           .aspectRatio(contentMode: .fit)
           .frame(
-            width: self.viewModel.state.isAnimation ? 100 : 120,
-            height: self.viewModel.state.isAnimation ? 100 : 120
+            width: self.viewModel.state.isAnimation ? 120 : 400,
+            height: self.viewModel.state.isAnimation ? 120 : 400
           )
-          .position(x: (geometry.size.width / 2) - 5, y: geometry.size.height / 3)
-          .animation(.spring(response: 2), value: self.viewModel.state.isAnimation)
+          .position(
+            x: (geometry.size.width / 2) - 5,
+            y: self.viewModel.state.isAnimation
+            ? geometry.size.height / 3
+            : geometry.size.height / 2
+          )
+          .animation(
+            .easeIn(duration: 1),
+            value: self.viewModel.state.isAnimation
+          )
 
-        titleView(x: geometry.size.width / 2, y: geometry.size.height / 2.3)
+        if self.viewModel.state.isTitleVisible {
+          titleView(x: geometry.size.width / 2, y: geometry.size.height / 2.3)
+            .transition(.opacity.animation(.easeOut(duration: 1)))
+        }
       }
     }
     .background(ColorPalette.Indigo.indigo1)
@@ -54,8 +65,9 @@ struct LuanchView: View {
 }
 
 private enum Constant {
-  static var title: String { "새벽책방" }
+  static var title: String { "새벽서점" }
   static var subTitle: String { "당신이 찾는 모든 책" }
 }
 
-#Preview { LuanchView(viewModel: LuanchViewMoel()) }
+#Preview { LuanchView(viewModel: LuanchViewMoel(isTaskCompleted: Binding<Bool>.constant(false)))
+}

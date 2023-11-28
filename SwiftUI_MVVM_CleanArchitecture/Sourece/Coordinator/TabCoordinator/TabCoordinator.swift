@@ -34,7 +34,8 @@ final class TabCoordinator: Coordinator {
 
   @ViewBuilder
   func composeView() -> some View {
-    TabContainerView()
+    let viewModel = TabContainerViewModel()
+    TabContainerView(viewModel: viewModel)
       .environmentObject(self)
       .navigationBarHidden(true)
   }
@@ -42,8 +43,34 @@ final class TabCoordinator: Coordinator {
 
 extension TabCoordinator {
   @ViewBuilder
-  func luanchScreen() -> some View {
-    let viewModel = LuanchViewMoel()
-    LuanchView(viewModel: viewModel)
+  func luanchScreen(isTaskCompleted: Binding<Bool>) -> some View {
+    let ViewModel = LuanchViewMoel(isTaskCompleted: isTaskCompleted)
+    LuanchView(viewModel: ViewModel)
+  }
+
+  @ViewBuilder
+  func tabView(destination: TabDestination) -> some View {
+    VStack {
+      switch destination {
+      case .category:
+        CategoryView()
+      case .bookmark:
+        BookMarkView()
+      case .home:
+        HomeView()
+      case .shoppingBasket:
+        ShoppingBasketView()
+      case .myProfile:
+        MyProfileView()
+      }
+    }
+    .tabItem {
+      destination.tabBarItem
+        .environment(
+          \.symbolVariants,
+           destination == self.destination ? .fill : .none
+        )
+    }
+    .tag(destination)
   }
 }
