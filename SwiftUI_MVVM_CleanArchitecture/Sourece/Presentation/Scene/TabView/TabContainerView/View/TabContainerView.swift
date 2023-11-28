@@ -26,7 +26,7 @@ struct TabContainerView: View {
             isTaskCompleted: self.$viewModel.state.luanchTaskCompleted
           )
           .zIndex(2)
-          .transition(.opacity.animation(.easeIn))
+          .transition(.opacity.animation(.easeOut(duration: 1.5)))
         }
 
         self.tabView().zIndex(1)

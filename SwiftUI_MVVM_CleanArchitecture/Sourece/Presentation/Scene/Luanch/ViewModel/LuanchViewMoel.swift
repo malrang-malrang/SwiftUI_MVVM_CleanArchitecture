@@ -14,6 +14,7 @@ final class LuanchViewMoel: ViewModelable {
 
   struct State {
     var isAnimation = false
+    var isTitleVisible = false
     @Binding var taskCompleted: Bool
   }
 
@@ -31,8 +32,20 @@ final class LuanchViewMoel: ViewModelable {
   }
 
   private func luanchAnimation() {
-    self.state.isAnimation.toggle()
-    
+    DispatchQueue.main.asyncAfter(
+      deadline: .now() + 1,
+      execute: {
+        self.state.isAnimation.toggle()
+      }
+    )
+
+    DispatchQueue.main.asyncAfter(
+      deadline: .now() + 2,
+      execute: {
+        self.state.isTitleVisible.toggle()
+      }
+    )
+
     DispatchQueue.main.asyncAfter(
       deadline: .now() + 4,
       execute: {

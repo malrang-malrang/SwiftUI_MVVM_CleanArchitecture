@@ -7,13 +7,30 @@
 
 import SwiftUI
 
+final class HomeViewModel: ViewModelable {
+  enum Action {
+
+  }
+
+  struct State {
+
+  }
+  
+  @Published var state = State()
+
+  func action(_ action: Action) {
+
+  }
+}
+
 struct HomeView: View {
+  @State var isInfoSheetVisible = true
+
   var body: some View {
     NavigationView {
       contentsView()
         .toolbar(content: homeViewToolbar)
     }
-    .navigationViewStyle(.stack)
   }
 
   @ViewBuilder

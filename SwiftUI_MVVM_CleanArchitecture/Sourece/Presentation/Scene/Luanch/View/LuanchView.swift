@@ -26,16 +26,24 @@ struct LuanchView: View {
           .resizable()
           .aspectRatio(contentMode: .fit)
           .frame(
-            width: self.viewModel.state.isAnimation ? 120 : 150,
-            height: self.viewModel.state.isAnimation ? 120 : 150
+            width: self.viewModel.state.isAnimation ? 120 : 400,
+            height: self.viewModel.state.isAnimation ? 120 : 400
           )
-          .position(x: (geometry.size.width / 2) - 5, y: geometry.size.height / 3)
+          .position(
+            x: (geometry.size.width / 2) - 5,
+            y: self.viewModel.state.isAnimation
+            ? geometry.size.height / 3
+            : geometry.size.height / 2
+          )
           .animation(
-            .spring(duration: 1.5, bounce: 0.7),
+            .easeIn(duration: 1),
             value: self.viewModel.state.isAnimation
           )
 
-        titleView(x: geometry.size.width / 2, y: geometry.size.height / 2.3)
+        if self.viewModel.state.isTitleVisible {
+          titleView(x: geometry.size.width / 2, y: geometry.size.height / 2.3)
+            .transition(.opacity.animation(.easeOut(duration: 1)))
+        }
       }
     }
     .background(ColorPalette.Indigo.indigo1)
