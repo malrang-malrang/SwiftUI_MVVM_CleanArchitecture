@@ -75,6 +75,8 @@
 		30A0D3CB2B0F98F3004FE560 /* ShoppingBasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0D3CA2B0F98F3004FE560 /* ShoppingBasketView.swift */; };
 		30A0D3D02B0F99AB004FE560 /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0D3CF2B0F99AA004FE560 /* MyProfileView.swift */; };
 		30A4CFDB2B14D32600B47047 /* TabContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4CFDA2B14D32600B47047 /* TabContainerViewModel.swift */; };
+		30A4CFDD2B16204900B47047 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4CFDC2B16204900B47047 /* HomeViewModel.swift */; };
+		30A4CFE02B1621EE00B47047 /* DeliveryAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4CFDF2B1621EE00B47047 /* DeliveryAddressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +166,8 @@
 		30A0D3CA2B0F98F3004FE560 /* ShoppingBasketView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingBasketView.swift; sourceTree = "<group>"; };
 		30A0D3CF2B0F99AA004FE560 /* MyProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
 		30A4CFDA2B14D32600B47047 /* TabContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContainerViewModel.swift; sourceTree = "<group>"; };
+		30A4CFDC2B16204900B47047 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		30A4CFDF2B1621EE00B47047 /* DeliveryAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -562,6 +566,7 @@
 			isa = PBXGroup;
 			children = (
 				30903C2E2B0A383100EB69ED /* BusinessInfoView.swift */,
+				30A4CFDF2B1621EE00B47047 /* DeliveryAddressView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -752,6 +757,7 @@
 		30A0D3C32B0F95E4004FE560 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				30A4CFDC2B16204900B47047 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1014,7 +1020,9 @@
 				30A0D3B42B0F8487004FE560 /* DependencyContainer.swift in Sources */,
 				30903C4D2B0CED1800EB69ED /* AppDestination.swift in Sources */,
 				30A0D3C12B0F9445004FE560 /* BookMarkView.swift in Sources */,
+				30A4CFE02B1621EE00B47047 /* DeliveryAddressView.swift in Sources */,
 				30903BD82B08A37300EB69ED /* GoogleBooksAPI.swift in Sources */,
+				30A4CFDD2B16204900B47047 /* HomeViewModel.swift in Sources */,
 				30903C062B08A45C00EB69ED /* Color+Sugar.swift in Sources */,
 				30A0D3C62B0F95E4004FE560 /* HomeView.swift in Sources */,
 				30903BD72B08A37300EB69ED /* GoogleBooksRepositoryImpl.swift in Sources */,

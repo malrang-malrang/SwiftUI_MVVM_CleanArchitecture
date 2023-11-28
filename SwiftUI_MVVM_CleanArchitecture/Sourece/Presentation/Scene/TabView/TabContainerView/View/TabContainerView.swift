@@ -16,6 +16,7 @@ struct TabContainerView: View {
 
     self.setTabBarAppearence()
     self.setNavigationBarAppearence()
+    self.setScrollView()
   }
 
   var body: some View {
@@ -62,6 +63,10 @@ fileprivate extension TabContainerView {
     UINavigationBar.appearance().standardAppearance = navigationBarAppearance
     UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
     UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+  }
+
+  private func setScrollView() {
+    UIScrollView.appearance().bounces = false
   }
 }
 

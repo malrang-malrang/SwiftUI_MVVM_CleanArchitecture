@@ -7,24 +7,7 @@
 
 import SwiftUI
 
-final class HomeViewModel: ViewModelable {
-  enum Action {
-
-  }
-
-  struct State {
-
-  }
-  
-  @Published var state = State()
-
-  func action(_ action: Action) {
-
-  }
-}
-
 struct HomeView: View {
-  @State var isInfoSheetVisible = true
 
   var body: some View {
     NavigationView {
@@ -38,12 +21,24 @@ struct HomeView: View {
     GeometryReader { proxy in
       ScrollView {
         VStack {
-          BusinessInfoView()
-            .padding(.horizontal, 10)
+          DeliveryAddressView(
+            isSignIn: Binding<Bool>.constant(false),
+            authName: Binding<String?>.constant(nil),
+            beforeSignInAction: { print("didTapBeforeSignInAction") },
+            AfterSignInAction: { print("didTapAfterSignInAction") }
+          )
+          .padding(.horizontal, 10)
+
+          Spacer(minLength: 20)
+
         }
-        .frame(width: proxy.size.width)
+        .background(Color.white)
+
+        BusinessInfoView()
+          .padding(.horizontal, 10)
+          .background(ColorPalette.Gray.gray2)
       }
-      .background(ColorPalette.Gray.gray2)
+      .frame(width: proxy.size.width)
     }
   }
 }

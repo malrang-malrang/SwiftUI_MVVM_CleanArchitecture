@@ -32,6 +32,15 @@ enum ImageCollecteion {
     static var `default` = Image(systemName: "shippingbox")
   }
 
+  enum Lock {
+    static var `default` = Image(systemName: "lock")
+    static var fill = Image(systemName: "lock.fill")
+  }
+
+  enum Building {
+    static var `default` = Image(systemName: "building.2")
+  }
+
   enum TabBar {
     static var category = Image(systemName: "list.bullet")
     static var bookMark = Image(systemName: "star")

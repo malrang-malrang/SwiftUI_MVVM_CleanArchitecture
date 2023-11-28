@@ -9,7 +9,9 @@ import SwiftUI
 
 enum FontCollection {
   enum NexaLight {
+    static var font12 = Font.custom("Nexa-Light", size: 12)
     static var font14 = Font.custom("Nexa-Light", size: 14)
+    static var font16 = Font.custom("Nexa-Light", size: 16)
     static var font18 = Font.custom("Nexa-Light", size: 18)
   }
 
