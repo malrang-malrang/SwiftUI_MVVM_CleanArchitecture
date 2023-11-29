@@ -57,7 +57,11 @@ extension TabCoordinator {
       case .bookmark:
         BookMarkView()
       case .home:
-        HomeView()
+        let viewModel = HomeViewModel(
+          isSign: AppStorageService.shared.$isSign,
+          userInfo: AppStorageService.shared.$userInfo
+        )
+        HomeView(viewModel: viewModel)
       case .shoppingBasket:
         ShoppingBasketView()
       case .myProfile:

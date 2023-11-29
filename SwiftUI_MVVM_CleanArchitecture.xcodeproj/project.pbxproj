@@ -77,6 +77,10 @@
 		30A4CFDB2B14D32600B47047 /* TabContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4CFDA2B14D32600B47047 /* TabContainerViewModel.swift */; };
 		30A4CFDD2B16204900B47047 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4CFDC2B16204900B47047 /* HomeViewModel.swift */; };
 		30A4CFE02B1621EE00B47047 /* DeliveryAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4CFDF2B1621EE00B47047 /* DeliveryAddressView.swift */; };
+		30A4CFE32B17765E00B47047 /* AppStorageServiceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4CFE22B17765E00B47047 /* AppStorageServiceKey.swift */; };
+		30A4CFE52B1779D600B47047 /* AppStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4CFE42B1779D600B47047 /* AppStorageService.swift */; };
+		30A4CFE72B177BF400B47047 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4CFE62B177BF400B47047 /* UserInfo.swift */; };
+		30A4CFE92B17838400B47047 /* Optional+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4CFE82B17838400B47047 /* Optional+Sugar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +172,10 @@
 		30A4CFDA2B14D32600B47047 /* TabContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContainerViewModel.swift; sourceTree = "<group>"; };
 		30A4CFDC2B16204900B47047 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		30A4CFDF2B1621EE00B47047 /* DeliveryAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryAddressView.swift; sourceTree = "<group>"; };
+		30A4CFE22B17765E00B47047 /* AppStorageServiceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageServiceKey.swift; sourceTree = "<group>"; };
+		30A4CFE42B1779D600B47047 /* AppStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageService.swift; sourceTree = "<group>"; };
+		30A4CFE62B177BF400B47047 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		30A4CFE82B17838400B47047 /* Optional+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Sugar.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +299,7 @@
 		30903BBC2B08A37300EB69ED /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				30A4CFE12B17764600B47047 /* AppStorage */,
 				30903BBD2B08A37300EB69ED /* KeyChainService */,
 				30903BC02B08A37300EB69ED /* CacheService */,
 			);
@@ -474,6 +483,7 @@
 				30903BFD2B08A45C00EB69ED /* Encodable+Sugar.swift */,
 				30903BFE2B08A45C00EB69ED /* Color+Sugar.swift */,
 				30903BFF2B08A45C00EB69ED /* Result+Sugar.swift */,
+				30A4CFE82B17838400B47047 /* Optional+Sugar.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -506,6 +516,7 @@
 			isa = PBXGroup;
 			children = (
 				30903BE72B08A37800EB69ED /* SearchResult.swift */,
+				30A4CFE62B177BF400B47047 /* UserInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -826,6 +837,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		30A4CFE12B17764600B47047 /* AppStorage */ = {
+			isa = PBXGroup;
+			children = (
+				30A4CFE22B17765E00B47047 /* AppStorageServiceKey.swift */,
+				30A4CFE42B1779D600B47047 /* AppStorageService.swift */,
+			);
+			path = AppStorage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -986,14 +1006,17 @@
 				30903C112B08A9F400EB69ED /* ProductImage.swift in Sources */,
 				30903C5C2B0CF56F00EB69ED /* TabCoordinator.swift in Sources */,
 				30903BDD2B08A37300EB69ED /* ReadingModesDTO.swift in Sources */,
+				30A4CFE72B177BF400B47047 /* UserInfo.swift in Sources */,
 				30903C3A2B0A4B5400EB69ED /* ImageCollecteion.swift in Sources */,
 				30A0D3B72B0F857A004FE560 /* DefaultDefendencyContainer.swift in Sources */,
 				30903BFA2B08A42400EB69ED /* NetworkProvider.swift in Sources */,
+				30A4CFE32B17765E00B47047 /* AppStorageServiceKey.swift in Sources */,
 				30903BD52B08A37300EB69ED /* KeyChainService.swift in Sources */,
 				30903BEF2B08A37800EB69ED /* GetBookListUsecase.swift in Sources */,
 				30903C052B08A45C00EB69ED /* Encodable+Sugar.swift in Sources */,
 				30A0D3BC2B0F9059004FE560 /* CategoryView.swift in Sources */,
 				30A0D3CB2B0F98F3004FE560 /* ShoppingBasketView.swift in Sources */,
+				30A4CFE92B17838400B47047 /* Optional+Sugar.swift in Sources */,
 				30903BD42B08A37300EB69ED /* KeyChainServiceKey.swift in Sources */,
 				30A4CFDB2B14D32600B47047 /* TabContainerViewModel.swift in Sources */,
 				30903C562B0CF04D00EB69ED /* AppCoordinator.swift in Sources */,
@@ -1014,6 +1037,7 @@
 				30903BE32B08A37300EB69ED /* PanelizationSummaryDTO.swift in Sources */,
 				30903BDC2B08A37300EB69ED /* ImageLinksDTO.swift in Sources */,
 				30903BD62B08A37300EB69ED /* ImageCacheService.swift in Sources */,
+				30A4CFE52B1779D600B47047 /* AppStorageService.swift in Sources */,
 				30903BE02B08A37300EB69ED /* ProductDTO.swift in Sources */,
 				30903C3F2B0CDF7600EB69ED /* ViewModelable.swift in Sources */,
 				30903BF02B08A37800EB69ED /* GoogleBooksRepository.swift in Sources */,

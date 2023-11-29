@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+  @StateObject var viewModel: HomeViewModel
 
   var body: some View {
     NavigationView {
@@ -22,8 +23,8 @@ struct HomeView: View {
       ScrollView {
         VStack {
           DeliveryAddressView(
-            isSignIn: Binding<Bool>.constant(false),
-            authName: Binding<String?>.constant(nil),
+            isSignIn: self.viewModel.state.$isSign,
+            userInfo: self.viewModel.state.$userInfo,
             beforeSignInAction: { print("didTapBeforeSignInAction") },
             AfterSignInAction: { print("didTapAfterSignInAction") }
           )
@@ -75,4 +76,10 @@ private enum Constant {
   static var appName: String { "새벽서점" }
 }
 
-#Preview { HomeView() }
+#Preview {
+  HomeView(
+    viewModel: HomeViewModel(
+      isSign: Binding<Bool>.constant(true),
+      userInfo: Binding<UserInfo?>.constant(UserInfo(id: "말랑", password: "01054206477"))
+    ))
+}

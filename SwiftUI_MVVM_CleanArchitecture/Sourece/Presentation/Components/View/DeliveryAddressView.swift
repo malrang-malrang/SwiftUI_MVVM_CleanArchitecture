@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DeliveryAddressView: View {
   @Binding var isSignIn: Bool
-  @Binding var authName: String?
+  @Binding var userInfo: UserInfo?
   let beforeSignInAction: () -> Void
   let AfterSignInAction: () -> Void
 
@@ -45,7 +45,7 @@ struct DeliveryAddressView: View {
       ImageCollecteion.Building.default
         .foregroundStyle(ColorPalette.Gray.gray7)
 
-      Text(self.authName ?? Constant.emptyString)
+      Text(self.userInfo?.id ?? Constant.emptyString)
         .foregroundStyle(ColorPalette.Gray.gray7)
         .font(FontCollection.NexaLight.font14)
 
@@ -77,7 +77,7 @@ fileprivate enum Constant {
 #Preview {
   DeliveryAddressView(
     isSignIn: Binding<Bool>.constant(true),
-    authName: Binding<String?>.constant("말랑"),
+    userInfo: Binding<UserInfo?>.constant(UserInfo(id: "말랑", password: "01054206477")),
     beforeSignInAction: { print("didTapBeforeSignInDeliveryAddressView") },
     AfterSignInAction: { print("didTapAfterSignInDeliveryAddressView") }
   )
