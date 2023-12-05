@@ -81,6 +81,9 @@
 		30A4CFE52B1779D600B47047 /* AppStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4CFE42B1779D600B47047 /* AppStorageService.swift */; };
 		30A4CFE72B177BF400B47047 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4CFE62B177BF400B47047 /* UserInfo.swift */; };
 		30A4CFE92B17838400B47047 /* Optional+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A4CFE82B17838400B47047 /* Optional+Sugar.swift */; };
+		30ACB2022B1F5B1600EF4618 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACB2012B1F5B1600EF4618 /* SignInView.swift */; };
+		30ACB2052B1F5D7A00EF4618 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACB2042B1F5D7A00EF4618 /* HomeCoordinator.swift */; };
+		30ACB2072B1F5D8700EF4618 /* HomeDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACB2062B1F5D8700EF4618 /* HomeDestination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +179,9 @@
 		30A4CFE42B1779D600B47047 /* AppStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageService.swift; sourceTree = "<group>"; };
 		30A4CFE62B177BF400B47047 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		30A4CFE82B17838400B47047 /* Optional+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Sugar.swift"; sourceTree = "<group>"; };
+		30ACB2012B1F5B1600EF4618 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		30ACB2042B1F5D7A00EF4618 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		30ACB2062B1F5D8700EF4618 /* HomeDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDestination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -629,6 +635,7 @@
 				30903C412B0CE26200EB69ED /* Protocol */,
 				30903C4B2B0CEA6500EB69ED /* AppCoordinator */,
 				30903C582B0CF4BF00EB69ED /* TabCoordinator */,
+				30ACB2032B1F5D5D00EF4618 /* HomeCoordinator */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -654,6 +661,7 @@
 		30903C4F2B0CEE1500EB69ED /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				30ACB1FF2B1F5AFB00EF4618 /* SignIn */,
 				30903C302B0A39DA00EB69ED /* Luanch */,
 				30903C502B0CEE3000EB69ED /* TabView */,
 			);
@@ -846,6 +854,31 @@
 			path = AppStorage;
 			sourceTree = "<group>";
 		};
+		30ACB1FF2B1F5AFB00EF4618 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				30ACB2002B1F5B0300EF4618 /* View */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		30ACB2002B1F5B0300EF4618 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30ACB2012B1F5B1600EF4618 /* SignInView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30ACB2032B1F5D5D00EF4618 /* HomeCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				30ACB2042B1F5D7A00EF4618 /* HomeCoordinator.swift */,
+				30ACB2062B1F5D8700EF4618 /* HomeDestination.swift */,
+			);
+			path = HomeCoordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1002,11 +1035,14 @@
 				30903C2F2B0A383200EB69ED /* BusinessInfoView.swift in Sources */,
 				30903BEE2B08A37800EB69ED /* SearchResult.swift in Sources */,
 				30903C542B0CEF2200EB69ED /* TabContainerView.swift in Sources */,
+				30ACB2022B1F5B1600EF4618 /* SignInView.swift in Sources */,
 				30903C452B0CE44600EB69ED /* Coordinator.swift in Sources */,
+				30ACB2052B1F5D7A00EF4618 /* HomeCoordinator.swift in Sources */,
 				30903C112B08A9F400EB69ED /* ProductImage.swift in Sources */,
 				30903C5C2B0CF56F00EB69ED /* TabCoordinator.swift in Sources */,
 				30903BDD2B08A37300EB69ED /* ReadingModesDTO.swift in Sources */,
 				30A4CFE72B177BF400B47047 /* UserInfo.swift in Sources */,
+				30ACB2072B1F5D8700EF4618 /* HomeDestination.swift in Sources */,
 				30903C3A2B0A4B5400EB69ED /* ImageCollecteion.swift in Sources */,
 				30A0D3B72B0F857A004FE560 /* DefaultDefendencyContainer.swift in Sources */,
 				30903BFA2B08A42400EB69ED /* NetworkProvider.swift in Sources */,

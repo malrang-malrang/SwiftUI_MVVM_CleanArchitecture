@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct HomeView: View {
+  @EnvironmentObject var coordinator: HomeCoordinator
   @StateObject var viewModel: HomeViewModel
-
+  
   var body: some View {
     NavigationView {
-      contentsView()
+      self.contentsView()
         .toolbar(content: homeViewToolbar)
+        .fullScreenCover(
+          isPresented: self.$viewModel.state.isSignInVisible,
+          content: { SignInView() }
+        )
     }
   }
 
@@ -25,8 +30,8 @@ struct HomeView: View {
           DeliveryAddressView(
             isSignIn: self.viewModel.state.$isSign,
             userInfo: self.viewModel.state.$userInfo,
-            beforeSignInAction: { print("didTapBeforeSignInAction") },
-            AfterSignInAction: { print("didTapAfterSignInAction") }
+            beforeSignInAction: { self.viewModel.action(.didTapBeforeSignInAction) },
+            AfterSignInAction: { self.viewModel.action(.didTapAfterSignInAction) }
           )
           .padding(.horizontal, 10)
 

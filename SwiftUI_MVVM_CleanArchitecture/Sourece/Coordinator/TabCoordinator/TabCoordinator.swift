@@ -57,11 +57,12 @@ extension TabCoordinator {
       case .bookmark:
         BookMarkView()
       case .home:
-        let viewModel = HomeViewModel(
-          isSign: AppStorageService.shared.$isSign,
-          userInfo: AppStorageService.shared.$userInfo
+        let coordinator = HomeCoordinator(
+          dependencyContainer: self.dependencyContainer,
+          parent: self,
+          destination: .root
         )
-        HomeView(viewModel: viewModel)
+        coordinator.composeView()
       case .shoppingBasket:
         ShoppingBasketView()
       case .myProfile:
