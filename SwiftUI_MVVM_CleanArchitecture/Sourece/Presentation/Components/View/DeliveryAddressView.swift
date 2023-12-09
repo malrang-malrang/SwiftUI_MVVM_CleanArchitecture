@@ -15,7 +15,7 @@ struct DeliveryAddressView: View {
 
     var body: some View {
       if self.isSignIn {
-        self.signInView()
+        self.afterSignInView()
       } else {
         self.beforeSignInView()
       }
@@ -40,7 +40,7 @@ struct DeliveryAddressView: View {
   }
 
   @ViewBuilder
-  private func signInView() -> some View {
+  private func afterSignInView() -> some View {
     HStack(spacing: 10) {
       ImageCollecteion.Building.default
         .foregroundStyle(ColorPalette.Gray.gray7)

@@ -84,6 +84,8 @@
 		30ACB2022B1F5B1600EF4618 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACB2012B1F5B1600EF4618 /* SignInView.swift */; };
 		30ACB2052B1F5D7A00EF4618 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACB2042B1F5D7A00EF4618 /* HomeCoordinator.swift */; };
 		30ACB2072B1F5D8700EF4618 /* HomeDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACB2062B1F5D8700EF4618 /* HomeDestination.swift */; };
+		30ACB20B2B2201E200EF4618 /* View+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACB20A2B2201E200EF4618 /* View+Sugar.swift */; };
+		30ACB20D2B24329A00EF4618 /* CheckToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACB20C2B24329A00EF4618 /* CheckToggleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +184,8 @@
 		30ACB2012B1F5B1600EF4618 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		30ACB2042B1F5D7A00EF4618 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		30ACB2062B1F5D8700EF4618 /* HomeDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDestination.swift; sourceTree = "<group>"; };
+		30ACB20A2B2201E200EF4618 /* View+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Sugar.swift"; sourceTree = "<group>"; };
+		30ACB20C2B24329A00EF4618 /* CheckToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckToggleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -490,6 +494,7 @@
 				30903BFE2B08A45C00EB69ED /* Color+Sugar.swift */,
 				30903BFF2B08A45C00EB69ED /* Result+Sugar.swift */,
 				30A4CFE82B17838400B47047 /* Optional+Sugar.swift */,
+				30ACB20A2B2201E200EF4618 /* View+Sugar.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -549,6 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				30903C102B08A9F400EB69ED /* BorderPaddingButton.swift */,
+				30ACB20C2B24329A00EF4618 /* CheckToggleButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -1027,6 +1033,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30ACB20B2B2201E200EF4618 /* View+Sugar.swift in Sources */,
 				30903C5A2B0CF4DA00EB69ED /* TabDestination.swift in Sources */,
 				30903BF92B08A42400EB69ED /* APILoggerPlugin.swift in Sources */,
 				30903C122B08A9F400EB69ED /* BorderPaddingButton.swift in Sources */,
@@ -1056,6 +1063,7 @@
 				30903BD42B08A37300EB69ED /* KeyChainServiceKey.swift in Sources */,
 				30A4CFDB2B14D32600B47047 /* TabContainerViewModel.swift in Sources */,
 				30903C562B0CF04D00EB69ED /* AppCoordinator.swift in Sources */,
+				30ACB20D2B24329A00EF4618 /* CheckToggleButton.swift in Sources */,
 				30903BE12B08A37300EB69ED /* AccessInformationDTO.swift in Sources */,
 				30903C152B08AA9800EB69ED /* ColorPalette.swift in Sources */,
 				30903BD92B08A37300EB69ED /* BookInformationDTO.swift in Sources */,

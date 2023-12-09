@@ -41,6 +41,4 @@ final class HomeCoordinator: Coordinator {
     HomeView(viewModel: viewModel)
       .environmentObject(self)
   }
-
-  deinit { print("HomeCoordinator Deinit") }
 }

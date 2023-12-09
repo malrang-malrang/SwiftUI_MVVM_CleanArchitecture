@@ -17,6 +17,8 @@ enum FontCollection {
   }
 
   enum NexaBold {
+    static var font14 = Font.custom("Nexa-Bold", size: 14)
+    static var font16 = Font.custom("Nexa-Bold", size: 16)
     static var font18 = Font.custom("Nexa-Bold", size: 18)
     static var font24 = Font.custom("Nexa-Bold", size: 24)
     static var font28 = Font.custom("Nexa-Bold", size: 28)

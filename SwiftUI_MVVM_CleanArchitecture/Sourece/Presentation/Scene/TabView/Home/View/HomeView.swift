@@ -10,15 +10,17 @@ import SwiftUI
 struct HomeView: View {
   @EnvironmentObject var coordinator: HomeCoordinator
   @StateObject var viewModel: HomeViewModel
-  
+
   var body: some View {
     NavigationView {
       self.contentsView()
         .toolbar(content: homeViewToolbar)
         .fullScreenCover(
           isPresented: self.$viewModel.state.isSignInVisible,
-          content: { SignInView() }
+          content: { SignInView(viewModel: SignInViewModel()) }
         )
+
+      self.coordinator.navigationLinkSection()
     }
   }
 
