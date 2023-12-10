@@ -8,17 +8,14 @@
 import SwiftUI
 
 struct CheckToggleButton: View {
-  @Binding private var isActive: Bool
-  private let label: () -> Text?
-
-  init(isActive: Binding<Bool>, label: @escaping () -> Text?) {
-    self._isActive = isActive
-    self.label = label
-  }
+  @Binding var isActive: Bool
+  let label: () -> Text
 
   var body: some View {
     Button {
-      self.isActive.toggle()
+      withAnimation(.easeIn(duration: 0.3)) {
+        self.isActive.toggle()
+      }
     } label: {
       HStack {
         ImageCollecteion.CheckMark.circle

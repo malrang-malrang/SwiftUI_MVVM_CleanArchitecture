@@ -13,8 +13,6 @@
 		30903B9A2B089E7C00EB69ED /* SwiftUI_MVVM_CleanArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903B992B089E7C00EB69ED /* SwiftUI_MVVM_CleanArchitectureTests.swift */; };
 		30903BA42B089E7C00EB69ED /* SwiftUI_MVVM_CleanArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BA32B089E7C00EB69ED /* SwiftUI_MVVM_CleanArchitectureUITests.swift */; };
 		30903BA62B089E7C00EB69ED /* SwiftUI_MVVM_CleanArchitectureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BA52B089E7C00EB69ED /* SwiftUI_MVVM_CleanArchitectureUITestsLaunchTests.swift */; };
-		30903BB72B08A25900EB69ED /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 30903BB62B08A25900EB69ED /* Kingfisher */; };
-		30903BBA2B08A27500EB69ED /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 30903BB92B08A27500EB69ED /* Moya */; };
 		30903BD42B08A37300EB69ED /* KeyChainServiceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BBE2B08A37300EB69ED /* KeyChainServiceKey.swift */; };
 		30903BD52B08A37300EB69ED /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BBF2B08A37300EB69ED /* KeyChainService.swift */; };
 		30903BD62B08A37300EB69ED /* ImageCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903BC22B08A37300EB69ED /* ImageCacheService.swift */; };
@@ -86,6 +84,10 @@
 		30ACB2072B1F5D8700EF4618 /* HomeDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACB2062B1F5D8700EF4618 /* HomeDestination.swift */; };
 		30ACB20B2B2201E200EF4618 /* View+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACB20A2B2201E200EF4618 /* View+Sugar.swift */; };
 		30ACB20D2B24329A00EF4618 /* CheckToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACB20C2B24329A00EF4618 /* CheckToggleButton.swift */; };
+		30ACB2102B24596500EF4618 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 30ACB20F2B24596500EF4618 /* Moya */; };
+		30ACB2132B24596F00EF4618 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 30ACB2122B24596F00EF4618 /* Kingfisher */; };
+		30ACB2162B24687800EF4618 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACB2152B24687800EF4618 /* SignInViewModel.swift */; };
+		30ACB21A2B2474EF00EF4618 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACB2192B2474EF00EF4618 /* HapticManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +188,8 @@
 		30ACB2062B1F5D8700EF4618 /* HomeDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDestination.swift; sourceTree = "<group>"; };
 		30ACB20A2B2201E200EF4618 /* View+Sugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Sugar.swift"; sourceTree = "<group>"; };
 		30ACB20C2B24329A00EF4618 /* CheckToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckToggleButton.swift; sourceTree = "<group>"; };
+		30ACB2152B24687800EF4618 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		30ACB2192B2474EF00EF4618 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,8 +197,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30903BBA2B08A27500EB69ED /* Moya in Frameworks */,
-				30903BB72B08A25900EB69ED /* Kingfisher in Frameworks */,
+				30ACB2132B24596F00EF4618 /* Kingfisher in Frameworks */,
+				30ACB2102B24596500EF4618 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +452,7 @@
 		30903BF32B08A42400EB69ED /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				30ACB2182B2474DE00EF4618 /* HapticManager */,
 				30903BF42B08A42400EB69ED /* NetworkProvider */,
 			);
 			path = Common;
@@ -863,6 +868,7 @@
 		30ACB1FF2B1F5AFB00EF4618 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				30ACB2142B24686C00EF4618 /* ViewModel */,
 				30ACB2002B1F5B0300EF4618 /* View */,
 			);
 			path = SignIn;
@@ -885,6 +891,22 @@
 			path = HomeCoordinator;
 			sourceTree = "<group>";
 		};
+		30ACB2142B24686C00EF4618 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				30ACB2152B24687800EF4618 /* SignInViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		30ACB2182B2474DE00EF4618 /* HapticManager */ = {
+			isa = PBXGroup;
+			children = (
+				30ACB2192B2474EF00EF4618 /* HapticManager.swift */,
+			);
+			path = HapticManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -902,8 +924,8 @@
 			);
 			name = SwiftUI_MVVM_CleanArchitecture;
 			packageProductDependencies = (
-				30903BB62B08A25900EB69ED /* Kingfisher */,
-				30903BB92B08A27500EB69ED /* Moya */,
+				30ACB20F2B24596500EF4618 /* Moya */,
+				30ACB2122B24596F00EF4618 /* Kingfisher */,
 			);
 			productName = SwiftUI_MVVM_CleanArchitecture;
 			productReference = 30903B852B089E7A00EB69ED /* SwiftUI_MVVM_CleanArchitecture.app */;
@@ -978,8 +1000,8 @@
 			);
 			mainGroup = 30903B7C2B089E7A00EB69ED;
 			packageReferences = (
-				30903BB52B08A25900EB69ED /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				30903BB82B08A27500EB69ED /* XCRemoteSwiftPackageReference "Moya" */,
+				30ACB20E2B24596500EF4618 /* XCRemoteSwiftPackageReference "Moya" */,
+				30ACB2112B24596F00EF4618 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 30903B862B089E7A00EB69ED /* Products */;
 			projectDirPath = "";
@@ -1035,6 +1057,7 @@
 			files = (
 				30ACB20B2B2201E200EF4618 /* View+Sugar.swift in Sources */,
 				30903C5A2B0CF4DA00EB69ED /* TabDestination.swift in Sources */,
+				30ACB21A2B2474EF00EF4618 /* HapticManager.swift in Sources */,
 				30903BF92B08A42400EB69ED /* APILoggerPlugin.swift in Sources */,
 				30903C122B08A9F400EB69ED /* BorderPaddingButton.swift in Sources */,
 				30903C432B0CE37B00EB69ED /* Destination.swift in Sources */,
@@ -1083,6 +1106,7 @@
 				30903BD62B08A37300EB69ED /* ImageCacheService.swift in Sources */,
 				30A4CFE52B1779D600B47047 /* AppStorageService.swift in Sources */,
 				30903BE02B08A37300EB69ED /* ProductDTO.swift in Sources */,
+				30ACB2162B24687800EF4618 /* SignInViewModel.swift in Sources */,
 				30903C3F2B0CDF7600EB69ED /* ViewModelable.swift in Sources */,
 				30903BF02B08A37800EB69ED /* GoogleBooksRepository.swift in Sources */,
 				30A0D3B42B0F8487004FE560 /* DependencyContainer.swift in Sources */,
@@ -1428,15 +1452,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		30903BB52B08A25900EB69ED /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.10.0;
-			};
-		};
-		30903BB82B08A27500EB69ED /* XCRemoteSwiftPackageReference "Moya" */ = {
+		30ACB20E2B24596500EF4618 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya";
 			requirement = {
@@ -1444,18 +1460,26 @@
 				minimumVersion = 15.0.3;
 			};
 		};
+		30ACB2112B24596F00EF4618 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		30903BB62B08A25900EB69ED /* Kingfisher */ = {
+		30ACB20F2B24596500EF4618 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 30903BB52B08A25900EB69ED /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
-		30903BB92B08A27500EB69ED /* Moya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 30903BB82B08A27500EB69ED /* XCRemoteSwiftPackageReference "Moya" */;
+			package = 30ACB20E2B24596500EF4618 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		30ACB2122B24596F00EF4618 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30ACB2112B24596F00EF4618 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

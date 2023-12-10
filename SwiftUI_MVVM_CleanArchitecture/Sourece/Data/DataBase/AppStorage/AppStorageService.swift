@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-final class AppStorageService {
+final class AppStorageService: ObservableObject {
   static let shared = AppStorageService()
 
   private init() { }
@@ -18,5 +18,11 @@ final class AppStorageService {
 
   @AppStorage(AppStorageServiceKey.userInfo.value)
   var userInfo: UserInfo? = nil
+
+  @AppStorage(AppStorageServiceKey.automaticLogin.value)
+  var automaticLogin: Bool = false
+
+  @AppStorage(AppStorageServiceKey.saveID.value)
+  var saveID: Bool = false
 }
 

@@ -10,6 +10,8 @@ import Foundation
 enum AppStorageServiceKey: String {
   case isSign
   case userInfo
+  case automaticLogin
+  case saveID
 }
 
 extension AppStorageServiceKey {

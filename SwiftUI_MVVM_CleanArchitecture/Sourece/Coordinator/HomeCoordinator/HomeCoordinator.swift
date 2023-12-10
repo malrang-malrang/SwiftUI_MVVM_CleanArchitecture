@@ -42,3 +42,17 @@ final class HomeCoordinator: Coordinator {
       .environmentObject(self)
   }
 }
+
+extension HomeCoordinator {
+  @ViewBuilder
+  func signInView(isVisible: Binding<Bool>) -> some View {
+    let viewModel = SignInViewModel(
+      isVisible: isVisible,
+      saveID: AppStorageService.shared.$saveID,
+      automaticLogin: AppStorageService.shared.$automaticLogin,
+      userInfo: AppStorageService.shared.$userInfo,
+      isSign: AppStorageService.shared.$isSign
+    )
+    SignInView(viewModel: viewModel)
+  }
+}

@@ -7,41 +7,21 @@
 
 import SwiftUI
 
-final class SignInViewModel: ViewModelable {
-  enum Action {
-
-  }
-
+struct SignInView: View {
   enum FocusedField {
     case id
     case password
   }
 
-  struct State {
-    @Binding var id: String
-    @Binding var password: String
-  }
-
-  @Published var state: State
-  @FocusState var focusedField: FocusedField?
-
-  init() {
-    self.state = State(id: .constant(""), password: .constant(""))
-  }
-
-  func action(_ action: Action) {
-
-  }
-}
-
-struct SignInView: View {
-  @Environment(\.presentationMode) var presentation
   @StateObject var viewModel: SignInViewModel
-
-  var transaction = Transaction()
+  @FocusState var focusedField: FocusedField?
+  @State var id: String = ""
+  @State var password: String = ""
 
   var body: some View {
-    self.contentsView()
+    NavigationView {
+      self.contentsView()
+    }
   }
 
   @ViewBuilder
@@ -68,6 +48,10 @@ struct SignInView: View {
           self.signInButton()
             .padding([.top, .horizontal], 20)
         }
+
+        self.accountButtonList()
+          .padding(.top, 10)
+
       }
       .offset(y: 80)
     }
@@ -78,7 +62,7 @@ struct SignInView: View {
   @ViewBuilder
   private func closeButton() -> some View {
     Button {
-      withTransaction(self.transaction) { self.presentation.wrappedValue.dismiss() }
+      self.viewModel.action(.didTapCloseButton)
     } label: {
       ImageCollecteion.Xmark.default.foregroundStyle(ColorPalette.Gray.gray6)
     }
@@ -99,8 +83,8 @@ struct SignInView: View {
 
   @ViewBuilder
   private func idTextField() -> some View {
-    TextField(text: self.viewModel.state.$id) {
-      Text((self.viewModel.focusedField == .id) ? "" : Constant.inputId)
+    TextField(text: self.$id) {
+      Text((self.focusedField == .id) ? "" : Constant.inputId)
         .font(FontCollection.NexaLight.font14)
         .foregroundStyle(ColorPalette.Gray.gray4)
     }
@@ -110,19 +94,19 @@ struct SignInView: View {
     .overlay(
       RoundedRectangle(cornerRadius: 8)
         .stroke(
-          (self.viewModel.focusedField == .id)
+          (self.focusedField == .id)
           ? ColorPalette.Indigo.indigo1
           : ColorPalette.Gray.gray4,
           lineWidth: 1
         )
     )
-    .focused(self.viewModel.$focusedField, equals: .id)
+    .focused(self.$focusedField, equals: .id)
   }
 
   @ViewBuilder
   private func passwordTextField() -> some View {
-    TextField(text: self.viewModel.state.$password) {
-      Text((self.viewModel.focusedField == .password) ? "" : Constant.inputPassword)
+    TextField(text: self.$password) {
+      Text((self.focusedField == .password) ? "" : Constant.inputPassword)
         .font(FontCollection.NexaLight.font14)
         .foregroundStyle(ColorPalette.Gray.gray4)
     }
@@ -132,25 +116,25 @@ struct SignInView: View {
     .overlay(
       RoundedRectangle(cornerRadius: 8)
         .stroke(
-          (self.viewModel.focusedField == .password)
+          (self.focusedField == .password)
           ? ColorPalette.Indigo.indigo1
           : ColorPalette.Gray.gray4,
           lineWidth: 1
         )
     )
-    .focused(self.viewModel.$focusedField, equals: .password)
+    .focused(self.$focusedField, equals: .password)
   }
 
   @ViewBuilder
   private func saveButtonList() -> some View {
     HStack(spacing: 15) {
-      CheckToggleButton(isActive: Binding<Bool>.constant(false)) {
+      CheckToggleButton(isActive: self.$viewModel.state.saveID) {
         Text(Constant.saveID)
           .font(FontCollection.NexaLight.font14)
           .foregroundColor(.black)
       }
 
-      CheckToggleButton(isActive: Binding<Bool>.constant(true)) {
+      CheckToggleButton(isActive: self.$viewModel.state.automaticLogin) {
         Text(Constant.automaticLogin)
           .font(FontCollection.NexaLight.font14)
           .foregroundColor(.black)
@@ -161,7 +145,7 @@ struct SignInView: View {
   @ViewBuilder
   private func signInButton() -> some View {
     Button(action: {
-      print("didTapSignIn")
+      self.viewModel.action(.didTapSignIn(id: self.id, password: self.password))
     }, label: {
       Text(Constant.signIn)
         .font(FontCollection.NexaBold.font16)
@@ -173,6 +157,43 @@ struct SignInView: View {
         .cornerRadius(8)
     })
   }
+
+  @ViewBuilder
+  private func accountButtonList() -> some View {
+    HStack(spacing: 15) {
+      Button {
+        print("didTapFindID")
+      } label: {
+        Text(Constant.findID)
+          .foregroundStyle(.black)
+          .font(FontCollection.NexaLight.font13)
+      }
+
+      Divider()
+        .frame(width: 2, height: 15)
+        .foregroundStyle(ColorPalette.Gray.gray7)
+
+      Button {
+        print("didTapFindPassword")
+      } label: {
+        Text(Constant.findPassword)
+          .foregroundStyle(.black)
+          .font(FontCollection.NexaLight.font13)
+      }
+
+      Divider()
+        .frame(width: 2, height: 15)
+        .foregroundStyle(ColorPalette.Gray.gray7)
+
+      Button {
+        print("didTapJoinMembership")
+      } label: {
+        Text(Constant.joinMembership)
+          .foregroundStyle(.black)
+          .font(FontCollection.NexaLight.font13)
+      }
+    }
+  }
 }
 
 fileprivate enum Constant {
@@ -183,8 +204,17 @@ fileprivate enum Constant {
   static var signIn: String { "로그인" }
   static var saveID: String { "아이디 저장" }
   static var automaticLogin: String { "자동 로그인" }
+  static var findID: String { "아이디 찾기" }
+  static var findPassword: String { "비밀번호 찾기" }
+  static var joinMembership: String { "회원가입" }
 }
 
 #Preview {
-  SignInView(viewModel: SignInViewModel())
+  SignInView(viewModel: SignInViewModel(
+    isVisible: .constant(true),
+    saveID: .constant(false),
+    automaticLogin: .constant(false),
+    userInfo: .constant(nil),
+    isSign: .constant(false)
+  ))
 }

@@ -17,7 +17,11 @@ struct HomeView: View {
         .toolbar(content: homeViewToolbar)
         .fullScreenCover(
           isPresented: self.$viewModel.state.isSignInVisible,
-          content: { SignInView(viewModel: SignInViewModel()) }
+          content: {
+            self.coordinator.signInView(
+              isVisible: self.$viewModel.state.isSignInVisible
+            )
+          }
         )
 
       self.coordinator.navigationLinkSection()
