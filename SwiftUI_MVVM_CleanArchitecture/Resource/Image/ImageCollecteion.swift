@@ -49,6 +49,10 @@ enum ImageCollecteion {
     static var circle = Image(systemName: "checkmark.circle")
   }
 
+  enum Chevrone {
+    static var left = Image(systemName: "chevron.left")
+  }
+
   enum TabBar {
     static var category = Image(systemName: "list.bullet")
     static var bookMark = Image(systemName: "star")

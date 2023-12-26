@@ -1,27 +1,27 @@
 //
-//  HomeCoordinator.swift
+//  BookMarkCoordinator.swift
 //  SwiftUI_MVVM_CleanArchitecture
 //
-//  Created by 김동욱 on 12/5/23.
+//  Created by 김동욱 on 12/14/23.
 //
 
 import SwiftUI
 import Combine
 
-final class HomeCoordinator: Coordinator, ConvertibleToSignIn {
-  private(set) var popToRootViewTriggerName = Notification.Name(rawValue: "PopToHomeRoot")
+final class BookMarkCoordinator: Coordinator, ConvertibleToSignIn {
+  private(set) var popToRootViewTriggerName = Notification.Name(rawValue: "PopToBookMakrRoot")
   private(set) weak var dependencyContainer: DependencyContainer?
   private(set) weak var parent: (any Coordinator)?
   var cancellable: Set<AnyCancellable> = []
   var isRoot: Bool
 
-  @Published var destination: HomeDestination
+  @Published var destination: BookMarkDestination
   @Published var navigationTrigger = false
 
   init(
     dependencyContainer: DependencyContainer?,
     parent: (any Coordinator)?,
-    destination: HomeDestination,
+    destination: BookMarkDestination,
     isRoot: Bool = true
   ) {
     self.dependencyContainer = dependencyContainer
@@ -34,8 +34,16 @@ final class HomeCoordinator: Coordinator, ConvertibleToSignIn {
 
   @ViewBuilder
   func composeView() -> some View {
-    let viewModel = HomeViewModel()
-    HomeView(coordinator: self, viewModel: viewModel)
-      .environmentObject(AppStorageService.shared)
+    switch self.destination {
+    case .root:
+      self.bookMarkView()
+    }
+  }
+}
+
+extension BookMarkCoordinator {
+  @ViewBuilder
+  func bookMarkView() -> some View {
+    BookMarkView(appState: AppStorageService.shared, coordinator: self)
   }
 }

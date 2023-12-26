@@ -8,37 +8,44 @@
 import SwiftUI
 
 struct TabContainerView: View {
-  @EnvironmentObject var coordinator: TabCoordinator
-  @ObservedObject var viewModel: TabContainerViewModel
-
-  init(viewModel: TabContainerViewModel) {
-    self.viewModel = viewModel
-
-    self.setTabBarAppearence()
-    self.setNavigationBarAppearence()
-    self.setScrollView()
-  }
+  @StateObject var coordinator: TabCoordinator
+  @StateObject var viewModel: TabContainerViewModel
 
   var body: some View {
     NavigationView {
       ZStack {
-        if !self.viewModel.state.luanchTaskCompleted {
-          self.coordinator.luanchScreen(
-            isTaskCompleted: self.$viewModel.state.luanchTaskCompleted
-          )
-          .zIndex(2)
-          .transition(.opacity.animation(.easeOut(duration: 1.5)))
-        }
-
-        self.tabView().zIndex(1)
-
         self.coordinator.navigationLinkSection().zIndex(0)
+        self.contentsView().zIndex(1)
+
+        if !self.viewModel.state.luanchTaskCompleted {
+          self.coordinator.luanchScreen(isTaskCompleted: self.$viewModel.state.luanchTaskCompleted)
+          .transition(.opacity.animation(.easeOut(duration: 1.5)))
+          .zIndex(2)
+        }
       }
     }
   }
 
-  private func tabView() -> some View {
+  private func contentsView() -> some View {
     TabView(selection: $coordinator.destination) {
+//      self.coordinator.categoryView()
+//        .tabItem {
+//          TabDestination.category.tabBarItem
+//          //          .environment(
+//          //            \.symbolVariants,
+//          //             destination == self.destination ? .fill : .none
+//          //          )
+//        }
+//      .tag(self.coordinator.destination)
+//
+//      self.coordinator.bookmarkView()
+//
+//      self.coordinator.homeView()
+//
+//      self.coordinator.shoppingBasketView()
+//
+//      self.coordinator.myProfileView()
+
       self.coordinator.tabView(destination: .category)
       self.coordinator.tabView(destination: .bookmark)
       self.coordinator.tabView(destination: .home)
@@ -49,25 +56,14 @@ struct TabContainerView: View {
   }
 }
 
-fileprivate extension TabContainerView {
-  private func setTabBarAppearence() {
-    let tabBarAppearance = UITabBar.appearance()
-    tabBarAppearance.backgroundColor = UIColor(.white)
-    tabBarAppearance.shadowImage = UIImage()
-  }
-
-  private func setNavigationBarAppearence() {
-    let navigationBarAppearance = UINavigationBarAppearance()
-    navigationBarAppearance.backgroundColor = UIColor(.white)
-    navigationBarAppearance.shadowColor = .clear
-    UINavigationBar.appearance().standardAppearance = navigationBarAppearance
-    UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
-    UINavigationBar.appearance().compactAppearance = navigationBarAppearance
-  }
-
-  private func setScrollView() {
-    UIScrollView.appearance().bounces = false
-  }
+#Preview {
+  TabContainerView(
+    coordinator: TabCoordinator(
+      dependencyContainer: DefaultDependencyContainer(),
+      parent: nil,
+      destination: .home,
+      isRoot: true
+    ),
+    viewModel: TabContainerViewModel()
+  )
 }
-
-#Preview { TabContainerView(viewModel: TabContainerViewModel()) }

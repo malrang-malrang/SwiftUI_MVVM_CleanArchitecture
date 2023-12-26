@@ -10,8 +10,8 @@ import Combine
 
 final class TabCoordinator: Coordinator {
   private(set) var popToRootViewTriggerName = Notification.Name(rawValue: "PopToTabRoot")
-  private weak var dependencyContainer: DependencyContainer?
-  private weak var parent: AppCoordinator?
+  private(set) weak var dependencyContainer: DependencyContainer?
+  private(set) weak var parent: (any Coordinator)?
   var cancellable: Set<AnyCancellable> = []
   var isRoot: Bool
 
@@ -20,7 +20,7 @@ final class TabCoordinator: Coordinator {
 
   init(
     dependencyContainer: DependencyContainer?,
-    parent: AppCoordinator,
+    parent: (any Coordinator)?,
     destination: TabDestination,
     isRoot: Bool = true
   ) {
@@ -30,13 +30,15 @@ final class TabCoordinator: Coordinator {
     self.isRoot = isRoot
 
     self.subscribeIsRoot()
+    self.setTabBarAppearence()
+    self.setNavigationBarAppearence()
+    self.setScrollView()
   }
 
   @ViewBuilder
   func composeView() -> some View {
     let viewModel = TabContainerViewModel()
-    TabContainerView(viewModel: viewModel)
-      .environmentObject(self)
+    TabContainerView(coordinator: self, viewModel: viewModel)
       .navigationBarHidden(true)
   }
 }
@@ -49,20 +51,55 @@ extension TabCoordinator {
   }
 
   @ViewBuilder
+  func categoryView() -> some View {
+    let coordinator = CategoryCoordinator(
+      dependencyContainer: self.dependencyContainer,
+      parent: self,
+      destination: .root
+    )
+    coordinator.composeView()
+  }
+
+  @ViewBuilder
+  func bookmarkView() -> some View {
+    let coordinator = BookMarkCoordinator(
+      dependencyContainer: self.dependencyContainer,
+      parent: self,
+      destination: .root
+    )
+    coordinator.composeView()
+  }
+
+  @ViewBuilder
+  func homeView() -> some View {
+    let coordinator = HomeCoordinator(
+      dependencyContainer: self.dependencyContainer,
+      parent: self,
+      destination: .root
+    )
+    coordinator.composeView()
+  }
+
+  @ViewBuilder
+  func shoppingBasketView() -> some View {
+    ShoppingBasketView()
+  }
+
+  @ViewBuilder
+  func myProfileView() -> some View {
+    MyProfileView()
+  }
+
+  @ViewBuilder
   func tabView(destination: TabDestination) -> some View {
     VStack {
       switch destination {
       case .category:
-        CategoryView()
+        self.categoryView()
       case .bookmark:
-        BookMarkView()
+        self.bookmarkView()
       case .home:
-        let coordinator = HomeCoordinator(
-          dependencyContainer: self.dependencyContainer,
-          parent: self,
-          destination: .root
-        )
-        coordinator.composeView()
+        self.homeView()
       case .shoppingBasket:
         ShoppingBasketView()
       case .myProfile:
@@ -77,5 +114,26 @@ extension TabCoordinator {
         )
     }
     .tag(destination)
+  }
+}
+
+fileprivate extension TabCoordinator {
+  private func setTabBarAppearence() {
+    let tabBarAppearance = UITabBar.appearance()
+    tabBarAppearance.backgroundColor = UIColor(.white)
+    tabBarAppearance.shadowImage = UIImage()
+  }
+
+  private func setNavigationBarAppearence() {
+    let navigationBarAppearance = UINavigationBarAppearance()
+    navigationBarAppearance.backgroundColor = UIColor(.white)
+    navigationBarAppearance.shadowColor = .clear
+    UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+    UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+    UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+  }
+
+  private func setScrollView() {
+    UIScrollView.appearance().bounces = false
   }
 }

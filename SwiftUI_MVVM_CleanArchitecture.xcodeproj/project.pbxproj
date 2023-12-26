@@ -66,7 +66,7 @@
 		30903C5A2B0CF4DA00EB69ED /* TabDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C592B0CF4DA00EB69ED /* TabDestination.swift */; };
 		30903C5C2B0CF56F00EB69ED /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30903C5B2B0CF56F00EB69ED /* TabCoordinator.swift */; };
 		30A0D3B42B0F8487004FE560 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0D3B32B0F8487004FE560 /* DependencyContainer.swift */; };
-		30A0D3B72B0F857A004FE560 /* DefaultDefendencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0D3B62B0F857A004FE560 /* DefaultDefendencyContainer.swift */; };
+		30A0D3B72B0F857A004FE560 /* DefaultDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0D3B62B0F857A004FE560 /* DefaultDependencyContainer.swift */; };
 		30A0D3BC2B0F9059004FE560 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0D3BB2B0F9059004FE560 /* CategoryView.swift */; };
 		30A0D3C12B0F9445004FE560 /* BookMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0D3C02B0F9445004FE560 /* BookMarkView.swift */; };
 		30A0D3C62B0F95E4004FE560 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0D3C52B0F95E4004FE560 /* HomeView.swift */; };
@@ -88,6 +88,14 @@
 		30ACB2132B24596F00EF4618 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 30ACB2122B24596F00EF4618 /* Kingfisher */; };
 		30ACB2162B24687800EF4618 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACB2152B24687800EF4618 /* SignInViewModel.swift */; };
 		30ACB21A2B2474EF00EF4618 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACB2192B2474EF00EF4618 /* HapticManager.swift */; };
+		30ACB21D2B259AEF00EF4618 /* CategoryDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACB21C2B259AEF00EF4618 /* CategoryDestination.swift */; };
+		30ACB21F2B259B1300EF4618 /* CategoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACB21E2B259B1300EF4618 /* CategoryCoordinator.swift */; };
+		30ACB2212B259BC400EF4618 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACB2202B259BC400EF4618 /* CategoryViewModel.swift */; };
+		30ACB2252B25D45600EF4618 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACB2242B25D45600EF4618 /* SettingView.swift */; };
+		30F920902B2B11C100923DD9 /* NavigationBarBackButtonImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9208F2B2B11C100923DD9 /* NavigationBarBackButtonImageModifier.swift */; };
+		30F920942B2B26B000923DD9 /* ConvertibleToSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F920932B2B26B000923DD9 /* ConvertibleToSignIn.swift */; };
+		30F920992B2B2DDA00923DD9 /* BookMarkCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F920982B2B2DDA00923DD9 /* BookMarkCoordinator.swift */; };
+		30F9209B2B2B2DF800923DD9 /* BookMarkDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9209A2B2B2DF800923DD9 /* BookMarkDestination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,7 +178,7 @@
 		30903C592B0CF4DA00EB69ED /* TabDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDestination.swift; sourceTree = "<group>"; };
 		30903C5B2B0CF56F00EB69ED /* TabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
 		30A0D3B32B0F8487004FE560 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
-		30A0D3B62B0F857A004FE560 /* DefaultDefendencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDefendencyContainer.swift; sourceTree = "<group>"; };
+		30A0D3B62B0F857A004FE560 /* DefaultDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDependencyContainer.swift; sourceTree = "<group>"; };
 		30A0D3BB2B0F9059004FE560 /* CategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		30A0D3C02B0F9445004FE560 /* BookMarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookMarkView.swift; sourceTree = "<group>"; };
 		30A0D3C52B0F95E4004FE560 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -190,6 +198,14 @@
 		30ACB20C2B24329A00EF4618 /* CheckToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckToggleButton.swift; sourceTree = "<group>"; };
 		30ACB2152B24687800EF4618 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		30ACB2192B2474EF00EF4618 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		30ACB21C2B259AEF00EF4618 /* CategoryDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDestination.swift; sourceTree = "<group>"; };
+		30ACB21E2B259B1300EF4618 /* CategoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCoordinator.swift; sourceTree = "<group>"; };
+		30ACB2202B259BC400EF4618 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		30ACB2242B25D45600EF4618 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		30F9208F2B2B11C100923DD9 /* NavigationBarBackButtonImageModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarBackButtonImageModifier.swift; sourceTree = "<group>"; };
+		30F920932B2B26B000923DD9 /* ConvertibleToSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertibleToSignIn.swift; sourceTree = "<group>"; };
+		30F920982B2B2DDA00923DD9 /* BookMarkCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkCoordinator.swift; sourceTree = "<group>"; };
+		30F9209A2B2B2DF800923DD9 /* BookMarkDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMarkDestination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -507,6 +523,7 @@
 		30903C002B08A45C00EB69ED /* Modifier */ = {
 			isa = PBXGroup;
 			children = (
+				30F9208E2B2B11A400923DD9 /* NavigationBar */,
 				30903C032B08A45C00EB69ED /* Debug */,
 			);
 			path = Modifier;
@@ -646,7 +663,11 @@
 				30903C412B0CE26200EB69ED /* Protocol */,
 				30903C4B2B0CEA6500EB69ED /* AppCoordinator */,
 				30903C582B0CF4BF00EB69ED /* TabCoordinator */,
+				30ACB21B2B259AD300EF4618 /* CategoryCoordinator */,
+				30F920952B2B2D4900923DD9 /* BookMarkCoordinator */,
 				30ACB2032B1F5D5D00EF4618 /* HomeCoordinator */,
+				30F920962B2B2D5A00923DD9 /* ShoppingBasketCoordinator */,
+				30F920972B2B2D6700923DD9 /* MyProfileCoordinator */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -654,8 +675,8 @@
 		30903C412B0CE26200EB69ED /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				30903C442B0CE44600EB69ED /* Coordinator.swift */,
-				30903C422B0CE37B00EB69ED /* Destination.swift */,
+				30F920912B2B264000923DD9 /* Base */,
+				30F920922B2B264700923DD9 /* Convertible */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -672,6 +693,7 @@
 		30903C4F2B0CEE1500EB69ED /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				30ACB2222B25D44000EF4618 /* Setting */,
 				30ACB1FF2B1F5AFB00EF4618 /* SignIn */,
 				30903C302B0A39DA00EB69ED /* Luanch */,
 				30903C502B0CEE3000EB69ED /* TabView */,
@@ -722,7 +744,7 @@
 			isa = PBXGroup;
 			children = (
 				30A0D3B32B0F8487004FE560 /* DependencyContainer.swift */,
-				30A0D3B62B0F857A004FE560 /* DefaultDefendencyContainer.swift */,
+				30A0D3B62B0F857A004FE560 /* DefaultDependencyContainer.swift */,
 			);
 			path = DependencyContainer;
 			sourceTree = "<group>";
@@ -739,6 +761,7 @@
 		30A0D3B92B0F9059004FE560 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				30ACB2202B259BC400EF4618 /* CategoryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -907,6 +930,79 @@
 			path = HapticManager;
 			sourceTree = "<group>";
 		};
+		30ACB21B2B259AD300EF4618 /* CategoryCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				30ACB21E2B259B1300EF4618 /* CategoryCoordinator.swift */,
+				30ACB21C2B259AEF00EF4618 /* CategoryDestination.swift */,
+			);
+			path = CategoryCoordinator;
+			sourceTree = "<group>";
+		};
+		30ACB2222B25D44000EF4618 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				30ACB2232B25D44800EF4618 /* View */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		30ACB2232B25D44800EF4618 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30ACB2242B25D45600EF4618 /* SettingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30F9208E2B2B11A400923DD9 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				30F9208F2B2B11C100923DD9 /* NavigationBarBackButtonImageModifier.swift */,
+			);
+			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		30F920912B2B264000923DD9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				30903C442B0CE44600EB69ED /* Coordinator.swift */,
+				30903C422B0CE37B00EB69ED /* Destination.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		30F920922B2B264700923DD9 /* Convertible */ = {
+			isa = PBXGroup;
+			children = (
+				30F920932B2B26B000923DD9 /* ConvertibleToSignIn.swift */,
+			);
+			path = Convertible;
+			sourceTree = "<group>";
+		};
+		30F920952B2B2D4900923DD9 /* BookMarkCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				30F920982B2B2DDA00923DD9 /* BookMarkCoordinator.swift */,
+				30F9209A2B2B2DF800923DD9 /* BookMarkDestination.swift */,
+			);
+			path = BookMarkCoordinator;
+			sourceTree = "<group>";
+		};
+		30F920962B2B2D5A00923DD9 /* ShoppingBasketCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ShoppingBasketCoordinator;
+			sourceTree = "<group>";
+		};
+		30F920972B2B2D6700923DD9 /* MyProfileCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MyProfileCoordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1057,11 +1153,16 @@
 			files = (
 				30ACB20B2B2201E200EF4618 /* View+Sugar.swift in Sources */,
 				30903C5A2B0CF4DA00EB69ED /* TabDestination.swift in Sources */,
+				30F920992B2B2DDA00923DD9 /* BookMarkCoordinator.swift in Sources */,
 				30ACB21A2B2474EF00EF4618 /* HapticManager.swift in Sources */,
+				30F9209B2B2B2DF800923DD9 /* BookMarkDestination.swift in Sources */,
 				30903BF92B08A42400EB69ED /* APILoggerPlugin.swift in Sources */,
 				30903C122B08A9F400EB69ED /* BorderPaddingButton.swift in Sources */,
+				30ACB2212B259BC400EF4618 /* CategoryViewModel.swift in Sources */,
 				30903C432B0CE37B00EB69ED /* Destination.swift in Sources */,
+				30ACB21D2B259AEF00EF4618 /* CategoryDestination.swift in Sources */,
 				30903BED2B08A37800EB69ED /* BookSearchRequest.swift in Sources */,
+				30ACB2252B25D45600EF4618 /* SettingView.swift in Sources */,
 				30903C2F2B0A383200EB69ED /* BusinessInfoView.swift in Sources */,
 				30903BEE2B08A37800EB69ED /* SearchResult.swift in Sources */,
 				30903C542B0CEF2200EB69ED /* TabContainerView.swift in Sources */,
@@ -1074,7 +1175,7 @@
 				30A4CFE72B177BF400B47047 /* UserInfo.swift in Sources */,
 				30ACB2072B1F5D8700EF4618 /* HomeDestination.swift in Sources */,
 				30903C3A2B0A4B5400EB69ED /* ImageCollecteion.swift in Sources */,
-				30A0D3B72B0F857A004FE560 /* DefaultDefendencyContainer.swift in Sources */,
+				30A0D3B72B0F857A004FE560 /* DefaultDependencyContainer.swift in Sources */,
 				30903BFA2B08A42400EB69ED /* NetworkProvider.swift in Sources */,
 				30A4CFE32B17765E00B47047 /* AppStorageServiceKey.swift in Sources */,
 				30903BD52B08A37300EB69ED /* KeyChainService.swift in Sources */,
@@ -1084,9 +1185,11 @@
 				30A0D3CB2B0F98F3004FE560 /* ShoppingBasketView.swift in Sources */,
 				30A4CFE92B17838400B47047 /* Optional+Sugar.swift in Sources */,
 				30903BD42B08A37300EB69ED /* KeyChainServiceKey.swift in Sources */,
+				30ACB21F2B259B1300EF4618 /* CategoryCoordinator.swift in Sources */,
 				30A4CFDB2B14D32600B47047 /* TabContainerViewModel.swift in Sources */,
 				30903C562B0CF04D00EB69ED /* AppCoordinator.swift in Sources */,
 				30ACB20D2B24329A00EF4618 /* CheckToggleButton.swift in Sources */,
+				30F920942B2B26B000923DD9 /* ConvertibleToSignIn.swift in Sources */,
 				30903BE12B08A37300EB69ED /* AccessInformationDTO.swift in Sources */,
 				30903C152B08AA9800EB69ED /* ColorPalette.swift in Sources */,
 				30903BD92B08A37300EB69ED /* BookInformationDTO.swift in Sources */,
@@ -1094,6 +1197,7 @@
 				30903BDE2B08A37300EB69ED /* SearchResultDTO.swift in Sources */,
 				30903C3C2B0CDECA00EB69ED /* LuanchViewMoel.swift in Sources */,
 				30903B892B089E7A00EB69ED /* SwiftUI_MVVM_CleanArchitectureApp.swift in Sources */,
+				30F920902B2B11C100923DD9 /* NavigationBarBackButtonImageModifier.swift in Sources */,
 				30903BDA2B08A37300EB69ED /* SaleInformationDTO.swift in Sources */,
 				30A0D3D02B0F99AB004FE560 /* MyProfileView.swift in Sources */,
 				30903C362B0A44D500EB69ED /* FontCollection.swift in Sources */,

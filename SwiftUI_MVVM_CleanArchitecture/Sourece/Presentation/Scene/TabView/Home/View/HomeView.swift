@@ -8,23 +8,23 @@
 import SwiftUI
 
 struct HomeView: View {
-  @EnvironmentObject var coordinator: HomeCoordinator
+  @EnvironmentObject var appState: AppStorageService
+  @StateObject var coordinator: HomeCoordinator
   @StateObject var viewModel: HomeViewModel
+
+  @State var isSignInVisible: Bool = false
 
   var body: some View {
     NavigationView {
-      self.contentsView()
-        .toolbar(content: homeViewToolbar)
-        .fullScreenCover(
-          isPresented: self.$viewModel.state.isSignInVisible,
-          content: {
-            self.coordinator.signInView(
-              isVisible: self.$viewModel.state.isSignInVisible
-            )
-          }
-        )
-
-      self.coordinator.navigationLinkSection()
+      ZStack {
+        self.coordinator.navigationLinkSection()
+        self.contentsView()
+          .toolbar(content: homeViewToolbar)
+          .fullScreenCover(
+            isPresented: self.$isSignInVisible,
+            content: { self.coordinator.signInView(isVisible: self.$isSignInVisible) }
+          )
+      }
     }
   }
 
@@ -34,10 +34,14 @@ struct HomeView: View {
       ScrollView {
         VStack {
           DeliveryAddressView(
-            isSignIn: self.viewModel.state.$isSign,
-            userInfo: self.viewModel.state.$userInfo,
-            beforeSignInAction: { self.viewModel.action(.didTapBeforeSignInAction) },
-            AfterSignInAction: { self.viewModel.action(.didTapAfterSignInAction) }
+            isSignIn: self.appState.$isSign,
+            userInfo: self.appState.$userInfo,
+            beforeSignInAction: {
+              self.withoutAnimation { self.isSignInVisible = true }
+            },
+            AfterSignInAction: {
+              print("didTapDeliveryAddressView")
+            }
           )
           .padding(.horizontal, 10)
 
@@ -46,9 +50,6 @@ struct HomeView: View {
         }
         .background(Color.white)
 
-        BusinessInfoView()
-          .padding(.horizontal, 10)
-          .background(ColorPalette.Gray.gray2)
       }
       .frame(width: proxy.size.width)
     }
@@ -89,8 +90,10 @@ private enum Constant {
 
 #Preview {
   HomeView(
-    viewModel: HomeViewModel(
-      isSign: Binding<Bool>.constant(true),
-      userInfo: Binding<UserInfo?>.constant(UserInfo(id: "말랑", password: "01054206477"))
-    ))
+    coordinator: HomeCoordinator(
+      dependencyContainer: DefaultDependencyContainer(),
+      parent: nil,
+      destination: .root
+    ),
+    viewModel: HomeViewModel())
 }

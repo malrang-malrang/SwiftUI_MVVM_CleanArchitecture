@@ -1,15 +1,15 @@
 //
-//  HomeViewModel.swift
+//  CategoryViewModel.swift
 //  SwiftUI_MVVM_CleanArchitecture
 //
-//  Created by 김동욱 on 11/28/23.
+//  Created by 김동욱 on 12/10/23.
 //
 
-import SwiftUI
+import Combine
 
-final class HomeViewModel: ViewModelable {
+final class CategoryViewModel: ViewModelable {
   enum Action {
-
+   
   }
 
   struct State {
@@ -17,7 +17,6 @@ final class HomeViewModel: ViewModelable {
   }
 
   @Published var state = State()
-  private var transaction = Transaction()
 
   func action(_ action: Action) {
 

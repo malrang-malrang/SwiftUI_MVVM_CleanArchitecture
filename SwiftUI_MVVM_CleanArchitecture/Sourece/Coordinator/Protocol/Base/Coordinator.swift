@@ -8,11 +8,12 @@
 import SwiftUI
 import Combine
 
-protocol Coordinator: ObservableObject {
+protocol Coordinator: ObservableObject, AnyObject {
   associatedtype SomeView: View
   associatedtype ViewPath: Destination
 
   var popToRootViewTriggerName: Notification.Name { get }
+  var parent: (any Coordinator)? { get }
   var isRoot: Bool { get }
   var destination: ViewPath { get set }
   var cancellable: Set<AnyCancellable> { get set }
@@ -47,6 +48,10 @@ extension Coordinator {
 
   func popToRoot() {
     NotificationCenter.default.post(name: self.popToRootViewTriggerName, object: nil)
+  }
+
+  func pop() {
+    self.parent?.navigationTrigger = false
   }
 
   func push(destination: ViewPath) {

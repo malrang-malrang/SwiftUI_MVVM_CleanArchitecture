@@ -8,19 +8,31 @@
 import SwiftUI
 
 struct SignInView: View {
-  enum FocusedField {
-    case id
-    case password
-  }
+  @ObservedObject var appState: AppStorageService
+  @ObservedObject var viewModel: SignInViewModel
+  @Binding var isVisible: Bool
 
-  @StateObject var viewModel: SignInViewModel
-  @FocusState var focusedField: FocusedField?
-  @State var id: String = ""
-  @State var password: String = ""
+  @FocusState private var focusedField: focusField?
+  @State private var id: String
+  @State private var password: String = ""
+
+  init(appState: AppStorageService, viewModel: SignInViewModel, isVisible: Binding<Bool>) {
+    self.appState = appState
+    self.viewModel = viewModel
+    self._id = State(initialValue: appState.userInfo?.id ?? "")
+    self._isVisible = isVisible
+  }
 
   var body: some View {
     NavigationView {
       self.contentsView()
+        .onChange(of: self.viewModel.state.signInTask) { value in
+          self.withoutAnimation { self.isVisible = !value }
+        }
+        .alert(
+          self.viewModel.state.errorMessage,
+          isPresented: self.$viewModel.state.isAlert
+        ) { Button(Constant.confirm) {} }
     }
   }
 
@@ -62,7 +74,7 @@ struct SignInView: View {
   @ViewBuilder
   private func closeButton() -> some View {
     Button {
-      self.viewModel.action(.didTapCloseButton)
+      self.withoutAnimation { self.isVisible = false }
     } label: {
       ImageCollecteion.Xmark.default.foregroundStyle(ColorPalette.Gray.gray6)
     }
@@ -128,13 +140,13 @@ struct SignInView: View {
   @ViewBuilder
   private func saveButtonList() -> some View {
     HStack(spacing: 15) {
-      CheckToggleButton(isActive: self.$viewModel.state.saveID) {
+      CheckToggleButton(isActive: self.appState.$saveID) {
         Text(Constant.saveID)
           .font(FontCollection.NexaLight.font14)
           .foregroundColor(.black)
       }
 
-      CheckToggleButton(isActive: self.$viewModel.state.automaticLogin) {
+      CheckToggleButton(isActive: self.appState.$automaticLogin) {
         Text(Constant.automaticLogin)
           .font(FontCollection.NexaLight.font14)
           .foregroundColor(.black)
@@ -145,6 +157,7 @@ struct SignInView: View {
   @ViewBuilder
   private func signInButton() -> some View {
     Button(action: {
+      HapticManager.shared.notification(type: .success)
       self.viewModel.action(.didTapSignIn(id: self.id, password: self.password))
     }, label: {
       Text(Constant.signIn)
@@ -196,6 +209,11 @@ struct SignInView: View {
   }
 }
 
+fileprivate enum focusField {
+  case id
+  case password
+}
+
 fileprivate enum Constant {
   static var title: String { "새벽서점" }
   static var subTitle: String { "당신이 찾는 모든 책" }
@@ -207,14 +225,13 @@ fileprivate enum Constant {
   static var findID: String { "아이디 찾기" }
   static var findPassword: String { "비밀번호 찾기" }
   static var joinMembership: String { "회원가입" }
+  static var confirm: String { "확인" }
 }
 
 #Preview {
-  SignInView(viewModel: SignInViewModel(
-    isVisible: .constant(true),
-    saveID: .constant(false),
-    automaticLogin: .constant(false),
-    userInfo: .constant(nil),
-    isSign: .constant(false)
-  ))
+  SignInView(
+    appState: AppStorageService.shared,
+    viewModel: SignInViewModel(),
+    isVisible: .constant(true)
+  )
 }
